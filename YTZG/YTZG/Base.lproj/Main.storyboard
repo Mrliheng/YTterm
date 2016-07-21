@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Qpx-rc-U47">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入您的密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e2x-st-DZA">
+                                <rect key="frame" x="55" y="195" width="304" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q1f-ra-2y1">
+                                <rect key="frame" x="55" y="309" width="304" height="30"/>
+                                <color key="backgroundColor" red="0.20299145579338074" green="0.20646059513092041" blue="0.92349964380264282" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="登陆">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="MainVCsender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mln-Ql-y5Y"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入您的帐号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vdd-cv-bcA">
+                                <rect key="frame" x="55" y="133" width="304" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Q1f-ra-2y1" secondAttribute="trailing" constant="35" id="3Hf-hr-Kt5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vdd-cv-bcA" secondAttribute="trailing" constant="35" id="4ge-7L-2ds"/>
+                            <constraint firstItem="vdd-cv-bcA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="35" id="6Ej-G4-YBH"/>
+                            <constraint firstItem="Q1f-ra-2y1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8Ox-V6-3fg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="e2x-st-DZA" secondAttribute="trailing" constant="35" id="BFC-P0-jIV"/>
+                            <constraint firstItem="e2x-st-DZA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="35" id="icx-su-Yqy"/>
+                            <constraint firstItem="Q1f-ra-2y1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="35" id="yv0-1H-VNP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="LfC-Qg-n89"/>
+                    <connections>
+                        <outlet property="LoginBT" destination="Q1f-ra-2y1" id="8gu-1y-f3A"/>
+                        <outlet property="Passtesxtfeild" destination="e2x-st-DZA" id="f8U-bi-G9G"/>
+                        <outlet property="Usertextfeild" destination="vdd-cv-bcA" id="NX0-Dj-g0a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="894" y="-82"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LLO-Oe-qhx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qpx-rc-U47" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="414" height="736"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mRa-Pc-23c">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Cq2-6y-G7R"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dEM-6c-ZUc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="82" y="-82"/>
+        </scene>
+    </scenes>
+</document>

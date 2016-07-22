@@ -45,6 +45,8 @@
 - (void)FXJZTableViewAdd
 {
     self.FXJZTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, self.view.bounds.size.height/16, self.view.bounds.size.width, self.view.bounds.size.height/16*4) style:UITableViewStylePlain];
+    self.FXJZTableView.tableFooterView.frame = CGRectZero;
+    self.FXJZTableView.tableHeaderView.frame = CGRectZero;
     self.FXJZTableView.separatorStyle = UITableViewCellSeparatorStyleNone;//分割线隐藏
     self.FXJZTableView.backgroundColor = [UIColor whiteColor];
     self.FXJZTableView.delegate = self;

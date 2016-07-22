@@ -60,6 +60,8 @@
 -(void)textViewSET
 {
     self.SetTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, self.view.bounds.size.height/16, self.view.bounds.size.width, self.view.bounds.size.height/16*4) style:UITableViewStylePlain];
+    self.SetTableView.tableFooterView.frame = CGRectZero;
+    self.SetTableView.tableHeaderView.frame = CGRectZero;
     self.SetTableView.separatorStyle = UITableViewCellSeparatorStyleNone;//分割线隐藏
     self.SetTableView.backgroundColor = [UIColor whiteColor];
     self.SetTableView.delegate = self;
@@ -99,7 +101,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"detailCell"];
-    cell.textLabel.font = [UIFont systemFontOfSize:self.SetTableView.bounds.size.height/12];
+    cell.textLabel.font = [UIFont systemFontOfSize:self.view.bounds.size.height/40];
     [cell  setAccessoryType:UITableViewCellAccessoryNone];
     if (indexPath.row == 0) {
         cell.textLabel.text = @"消息提醒";
@@ -111,7 +113,7 @@
         //副标题
         cell.detailTextLabel.text = @"最新版本:1.1.2";
         cell.detailTextLabel.textColor = [UIColor blackColor];
-        cell.detailTextLabel.font = [UIFont systemFontOfSize:self.SetTableView.bounds.size.height/16];
+        cell.detailTextLabel.font = [UIFont systemFontOfSize:self.view.bounds.size.height/64];
     }else if (indexPath.row == 3){
         cell.textLabel.text = @"关于";
     }

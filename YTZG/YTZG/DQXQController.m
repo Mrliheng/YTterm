@@ -73,6 +73,8 @@
 - (void)mainXQ
 {
     self.XQGYTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, self.view.bounds.size.height/16, self.view.bounds.size.width, self.view.bounds.size.height/16*5) style:UITableViewStylePlain];
+    self.XQGYTableView.tableFooterView.frame = CGRectZero;
+    self.XQGYTableView.tableHeaderView.frame = CGRectZero;
     self.XQGYTableView.separatorStyle = UITableViewCellSeparatorStyleNone;//分割线隐藏
     self.XQGYTableView.backgroundColor = [UIColor whiteColor];
     self.XQGYTableView.delegate = self;

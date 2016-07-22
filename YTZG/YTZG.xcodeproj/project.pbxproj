@@ -61,6 +61,16 @@
 		EBEE821B1D34801700469462 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = EBEE820A1D34801700469462 /* UIProgressView+AFNetworking.m */; };
 		EBEE821C1D34801700469462 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = EBEE820C1D34801700469462 /* UIRefreshControl+AFNetworking.m */; };
 		EBEE821D1D34801700469462 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = EBEE820E1D34801700469462 /* UIWebView+AFNetworking.m */; };
+		EBEF38B91D41A38700CA3A58 /* QXGTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBEF38B81D41A38700CA3A58 /* QXGTViewController.m */; };
+		EBEF38BC1D41A6EF00CA3A58 /* TXLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBEF38BB1D41A6EF00CA3A58 /* TXLViewController.m */; };
+		EBEF38C11D41AC6600CA3A58 /* XQX_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBEF38C01D41AC6600CA3A58 /* XQX_ViewController.m */; };
+		EBEF38C51D41B31B00CA3A58 /* LINKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBEF38C41D41B31B00CA3A58 /* LINKViewController.m */; };
+		EBEF38C81D41B7A400CA3A58 /* FXYAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBEF38C71D41B7A400CA3A58 /* FXYAViewController.m */; };
+		EBEF38CC1D41B9D000CA3A58 /* YAXQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBEF38CB1D41B9D000CA3A58 /* YAXQViewController.m */; };
+		EBEF38CF1D41BCC700CA3A58 /* YJDXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBEF38CE1D41BCC700CA3A58 /* YJDXViewController.m */; };
+		EBEF38D31D41BDCE00CA3A58 /* MANViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBEF38D21D41BDCE00CA3A58 /* MANViewController.m */; };
+		EBF5052C1D421B7B00DE267F /* STHeiti-Light.ttc in Resources */ = {isa = PBXBuildFile; fileRef = EBF5052A1D421B7B00DE267F /* STHeiti-Light.ttc */; };
+		EBF5052D1D421B7B00DE267F /* STHeiti-Medium.ttc in Resources */ = {isa = PBXBuildFile; fileRef = EBF5052B1D421B7B00DE267F /* STHeiti-Medium.ttc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -186,6 +196,24 @@
 		EBEE820C1D34801700469462 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		EBEE820D1D34801700469462 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		EBEE820E1D34801700469462 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		EBEF38B71D41A38700CA3A58 /* QXGTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXGTViewController.h; sourceTree = "<group>"; };
+		EBEF38B81D41A38700CA3A58 /* QXGTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXGTViewController.m; sourceTree = "<group>"; };
+		EBEF38BA1D41A6EF00CA3A58 /* TXLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXLViewController.h; sourceTree = "<group>"; };
+		EBEF38BB1D41A6EF00CA3A58 /* TXLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXLViewController.m; sourceTree = "<group>"; };
+		EBEF38BF1D41AC6600CA3A58 /* XQX_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XQX_ViewController.h; sourceTree = "<group>"; };
+		EBEF38C01D41AC6600CA3A58 /* XQX_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XQX_ViewController.m; sourceTree = "<group>"; };
+		EBEF38C31D41B31B00CA3A58 /* LINKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINKViewController.h; sourceTree = "<group>"; };
+		EBEF38C41D41B31B00CA3A58 /* LINKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINKViewController.m; sourceTree = "<group>"; };
+		EBEF38C61D41B7A400CA3A58 /* FXYAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXYAViewController.h; sourceTree = "<group>"; };
+		EBEF38C71D41B7A400CA3A58 /* FXYAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXYAViewController.m; sourceTree = "<group>"; };
+		EBEF38CA1D41B9D000CA3A58 /* YAXQViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YAXQViewController.h; sourceTree = "<group>"; };
+		EBEF38CB1D41B9D000CA3A58 /* YAXQViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YAXQViewController.m; sourceTree = "<group>"; };
+		EBEF38CD1D41BCC700CA3A58 /* YJDXViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJDXViewController.h; sourceTree = "<group>"; };
+		EBEF38CE1D41BCC700CA3A58 /* YJDXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJDXViewController.m; sourceTree = "<group>"; };
+		EBEF38D11D41BDCE00CA3A58 /* MANViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANViewController.h; sourceTree = "<group>"; };
+		EBEF38D21D41BDCE00CA3A58 /* MANViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANViewController.m; sourceTree = "<group>"; };
+		EBF5052A1D421B7B00DE267F /* STHeiti-Light.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "STHeiti-Light.ttc"; sourceTree = "<group>"; };
+		EBF5052B1D421B7B00DE267F /* STHeiti-Medium.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "STHeiti-Medium.ttc"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,6 +305,9 @@
 		EBA0ECB91D38C0BE006C8730 /* 预警短信 */ = {
 			isa = PBXGroup;
 			children = (
+				EBEF38CD1D41BCC700CA3A58 /* YJDXViewController.h */,
+				EBEF38CE1D41BCC700CA3A58 /* YJDXViewController.m */,
+				EBEF38D01D41BDAD00CA3A58 /* 人员确定 */,
 			);
 			name = "预警短信";
 			sourceTree = "<group>";
@@ -284,6 +315,9 @@
 		EBA0ECBA1D38C0C3006C8730 /* 防汛预案 */ = {
 			isa = PBXGroup;
 			children = (
+				EBEF38C61D41B7A400CA3A58 /* FXYAViewController.h */,
+				EBEF38C71D41B7A400CA3A58 /* FXYAViewController.m */,
+				EBEF38C91D41B99D00CA3A58 /* 预案详情阅读 */,
 			);
 			name = "防汛预案";
 			sourceTree = "<group>";
@@ -291,6 +325,9 @@
 		EBA0ECBB1D38C0C7006C8730 /* 通讯录 */ = {
 			isa = PBXGroup;
 			children = (
+				EBEF38BA1D41A6EF00CA3A58 /* TXLViewController.h */,
+				EBEF38BB1D41A6EF00CA3A58 /* TXLViewController.m */,
+				EBEF38BE1D41AC3200CA3A58 /* 县下边的区 */,
 			);
 			name = "通讯录";
 			sourceTree = "<group>";
@@ -305,6 +342,8 @@
 		EBA0ECBD1D38C0D1006C8730 /* 气象国土 */ = {
 			isa = PBXGroup;
 			children = (
+				EBEF38B71D41A38700CA3A58 /* QXGTViewController.h */,
+				EBEF38B81D41A38700CA3A58 /* QXGTViewController.m */,
 			);
 			name = "气象国土";
 			sourceTree = "<group>";
@@ -514,6 +553,7 @@
 		EBEE81E91D347EB100469462 /* 第三方库 */ = {
 			isa = PBXGroup;
 			children = (
+				EBF505281D421B4E00DE267F /* 第三方字体库 */,
 				EBC5BC681D3DF63F00A3E55A /* CoreGraphics.framework */,
 				EBC5BC661D3DF62400A3E55A /* UIKit.framework */,
 				EBC5BC641D3DF61100A3E55A /* Foundation.framework */,
@@ -572,6 +612,60 @@
 			name = "UIKit+AFNetworking";
 			path = "YTZGTests/UIKit+AFNetworking";
 			sourceTree = SOURCE_ROOT;
+		};
+		EBEF38BE1D41AC3200CA3A58 /* 县下边的区 */ = {
+			isa = PBXGroup;
+			children = (
+				EBEF38BF1D41AC6600CA3A58 /* XQX_ViewController.h */,
+				EBEF38C01D41AC6600CA3A58 /* XQX_ViewController.m */,
+				EBEF38C21D41AD9500CA3A58 /* 联系人 */,
+			);
+			name = "县下边的区";
+			sourceTree = "<group>";
+		};
+		EBEF38C21D41AD9500CA3A58 /* 联系人 */ = {
+			isa = PBXGroup;
+			children = (
+				EBEF38C31D41B31B00CA3A58 /* LINKViewController.h */,
+				EBEF38C41D41B31B00CA3A58 /* LINKViewController.m */,
+			);
+			name = "联系人";
+			sourceTree = "<group>";
+		};
+		EBEF38C91D41B99D00CA3A58 /* 预案详情阅读 */ = {
+			isa = PBXGroup;
+			children = (
+				EBEF38CA1D41B9D000CA3A58 /* YAXQViewController.h */,
+				EBEF38CB1D41B9D000CA3A58 /* YAXQViewController.m */,
+			);
+			name = "预案详情阅读";
+			sourceTree = "<group>";
+		};
+		EBEF38D01D41BDAD00CA3A58 /* 人员确定 */ = {
+			isa = PBXGroup;
+			children = (
+				EBEF38D11D41BDCE00CA3A58 /* MANViewController.h */,
+				EBEF38D21D41BDCE00CA3A58 /* MANViewController.m */,
+			);
+			name = "人员确定";
+			sourceTree = "<group>";
+		};
+		EBF505281D421B4E00DE267F /* 第三方字体库 */ = {
+			isa = PBXGroup;
+			children = (
+				EBF505291D421B7B00DE267F /* iPhone丽黑字体直接覆盖版A5 */,
+			);
+			name = "第三方字体库";
+			sourceTree = "<group>";
+		};
+		EBF505291D421B7B00DE267F /* iPhone丽黑字体直接覆盖版A5 */ = {
+			isa = PBXGroup;
+			children = (
+				EBF5052A1D421B7B00DE267F /* STHeiti-Light.ttc */,
+				EBF5052B1D421B7B00DE267F /* STHeiti-Medium.ttc */,
+			);
+			path = "iPhone丽黑字体直接覆盖版A5";
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -678,6 +772,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBA0ECE31D38C6A7006C8730 /* 8.png in Resources */,
+				EBF5052C1D421B7B00DE267F /* STHeiti-Light.ttc in Resources */,
 				EBC141771D3F135D00A20701 /* GYLBTableViewCell.xib in Resources */,
 				EBA0ECE41D38C6A7006C8730 /* 9.png in Resources */,
 				EBA0ECDF1D38C6A7006C8730 /* 4.png in Resources */,
@@ -687,6 +782,7 @@
 				EBA0ECE21D38C6A7006C8730 /* 7.png in Resources */,
 				EBA0ECDA1D38C6A7006C8730 /* 10.png in Resources */,
 				EBA0ECDC1D38C6A7006C8730 /* 12.png in Resources */,
+				EBF5052D1D421B7B00DE267F /* STHeiti-Medium.ttc in Resources */,
 				EBA0ECE11D38C6A7006C8730 /* 6.png in Resources */,
 				EBA0ECDE1D38C6A7006C8730 /* 3.png in Resources */,
 				EBEE819E1D3471C100469462 /* Main.storyboard in Resources */,
@@ -720,13 +816,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBEE821B1D34801700469462 /* UIProgressView+AFNetworking.m in Sources */,
+				EBEF38B91D41A38700CA3A58 /* QXGTViewController.m in Sources */,
 				EBEE82141D34801700469462 /* AFURLSessionManager.m in Sources */,
 				EBEE821D1D34801700469462 /* UIWebView+AFNetworking.m in Sources */,
 				EB4EC5BC1D3BB23400E24D1E /* MainViewController.m in Sources */,
+				EBEF38CC1D41B9D000CA3A58 /* YAXQViewController.m in Sources */,
+				EBEF38BC1D41A6EF00CA3A58 /* TXLViewController.m in Sources */,
+				EBEF38D31D41BDCE00CA3A58 /* MANViewController.m in Sources */,
 				EB1C56301D40C1AD0004AB2F /* SW_ViewController.m in Sources */,
 				EB1C56231D4056C50004AB2F /* YQXXViewController.m in Sources */,
 				EBEE821A1D34801700469462 /* UIImageView+AFNetworking.m in Sources */,
 				EBEE819B1D3471C100469462 /* ViewController.m in Sources */,
+				EBEF38C81D41B7A400CA3A58 /* FXYAViewController.m in Sources */,
 				EBC141861D3F7A5F00A20701 /* FXJZViewController.m in Sources */,
 				EBEE82191D34801700469462 /* UIButton+AFNetworking.m in Sources */,
 				EBC141761D3F135D00A20701 /* GYLBTableViewCell.m in Sources */,
@@ -744,10 +845,13 @@
 				EBC141801D3F597F00A20701 /* SetViewController.m in Sources */,
 				EBEE82121D34801700469462 /* AFURLRequestSerialization.m in Sources */,
 				EBEE82171D34801700469462 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				EBEF38C11D41AC6600CA3A58 /* XQX_ViewController.m in Sources */,
 				EBEE82131D34801700469462 /* AFURLResponseSerialization.m in Sources */,
 				EBEE820F1D34801700469462 /* AFHTTPSessionManager.m in Sources */,
 				EB1C56291D409B950004AB2F /* YLViewController.m in Sources */,
+				EBEF38CF1D41BCC700CA3A58 /* YJDXViewController.m in Sources */,
 				EBEE82161D34801700469462 /* AFImageDownloader.m in Sources */,
+				EBEF38C51D41B31B00CA3A58 /* LINKViewController.m in Sources */,
 				EBEE82181D34801700469462 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

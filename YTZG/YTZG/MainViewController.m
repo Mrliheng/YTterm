@@ -14,6 +14,10 @@
 #import "SQXXViewController.h"
 #import "WorkViewController.h"
 #import "FXJZViewController.h"
+#import "QXGTViewController.h"
+#import "TXLViewController.h"
+#import "FXYAViewController.h"
+#import "YJDXViewController.h"
 #import "SetViewController.h"
 @interface MainViewController ()
 @property (strong,nonatomic) BTView *btView;
@@ -294,18 +298,26 @@
 }//跳转防汛救灾
 
 - (void)mainSelector12{
+    QXGTViewController *qxgtController = [[QXGTViewController alloc]init];
+    [self.navigationController pushViewController:qxgtController animated:YES];
 }//跳转气象国土
 
 - (void)mainSelector13{
 }//跳转GIS应用
 
 - (void)mainSelector20{
+    TXLViewController *txlController = [[TXLViewController alloc]init];
+    [self.navigationController pushViewController:txlController animated:YES];
 }//跳转通讯录
 
 - (void)mainSelector21{
+    FXYAViewController *fxyaController = [[FXYAViewController alloc]init];
+    [self.navigationController pushViewController:fxyaController animated:YES];
 }//跳转防汛预案
 
 - (void)mainSelector22{
+    YJDXViewController *yjdxController = [[YJDXViewController alloc]init];
+    [self.navigationController pushViewController:yjdxController animated:YES];
 }//跳转预警短信
 
 - (void)mainSelector23{

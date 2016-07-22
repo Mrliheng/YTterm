@@ -110,6 +110,8 @@
     
     //设置YQXX_TableView,并添加在YQXX_ScrollView上
     self.SQXXTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, self.view.bounds.size.height/16, self.view.bounds.size.width, self.view.bounds.size.height/8*7-64) style:UITableViewStylePlain];
+    self.SQXXTableView.tableFooterView.frame = CGRectZero;
+    self.SQXXTableView.tableHeaderView.frame = CGRectZero;
     self.SQXXTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.SQXXTableView.backgroundColor = [UIColor whiteColor];
     self.SQXXTableView.delegate = self;

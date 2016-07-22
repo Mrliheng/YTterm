@@ -45,6 +45,8 @@
 - (void)WorkTableViewAdd
 {
     self.WorkTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, self.view.bounds.size.height/16, self.view.bounds.size.width, self.view.bounds.size.height/16*3) style:UITableViewStylePlain];
+    self.WorkTableView.tableFooterView.frame = CGRectZero;
+    self.WorkTableView.tableHeaderView.frame = CGRectZero;
     self.WorkTableView.separatorStyle = UITableViewCellSeparatorStyleNone;//分割线隐藏
     self.WorkTableView.backgroundColor = [UIColor whiteColor];
     self.WorkTableView.delegate = self;

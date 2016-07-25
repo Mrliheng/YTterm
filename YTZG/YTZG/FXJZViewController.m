@@ -8,6 +8,7 @@
 
 #import "FXJZViewController.h"
 #import "GYLBTableViewCell.h"
+#import "XQFJViewController.h"
 @interface FXJZViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (strong,nonatomic) UITableView *FXJZTableView;
 @end
@@ -89,6 +90,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    XQFJViewController *xqfjController = [[XQFJViewController alloc]init];
+    [self.navigationController pushViewController:xqfjController animated:YES];
 
     [self.FXJZTableView deselectRowAtIndexPath:[self.FXJZTableView indexPathForSelectedRow] animated:YES];
 }

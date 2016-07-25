@@ -8,6 +8,8 @@
 
 #import "WorkViewController.h"
 #import "GYLBTableViewCell.h"
+
+#import "XQWorkViewController.h"
 @interface WorkViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (strong,nonatomic) UITableView *WorkTableView;
 @end
@@ -90,6 +92,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    XQWorkViewController *xqWorkController = [[XQWorkViewController alloc]init];
+    [self.navigationController pushViewController:xqWorkController animated:YES];
+    //设置navigationItem.title(用tag值设置)
     
     [self.WorkTableView deselectRowAtIndexPath:[self.WorkTableView indexPathForSelectedRow] animated:YES];
 }

@@ -87,7 +87,7 @@
     cellLabel.textAlignment = NSTextAlignmentLeft;
     cellLabel.textColor = [UIColor colorWithRed:0.62 green:0.62 blue:0.64 alpha:1.0];
     //自动换行
-    cellLabel.lineBreakMode = UILineBreakModeWordWrap;
+    cellLabel.lineBreakMode = NSLineBreakByWordWrapping;
     cellLabel.numberOfLines = 0;
     [cell addSubview:cellLabel];
     

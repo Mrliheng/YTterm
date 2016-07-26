@@ -23,6 +23,7 @@
     // 从Storyboard上按照identifier获取指定的界面（VC），identifier必须是唯一的
     ViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
+    
     [self.window makeKeyAndVisible];
     return YES;
 }

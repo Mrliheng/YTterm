@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "BTView.h"
+#import "DateNowString.h"
 
 #import "DQXQController.h"
 #import "YQXXViewController.h"
@@ -77,6 +78,7 @@
     self.WCLlabel.textColor = [UIColor whiteColor];
     self.WCLlabel.font = [UIFont systemFontOfSize:self.WCLlabel.frame.size.height/25*16];
     self.WCLlabel.text = @"欢迎您";
+    ;
     [self.TView addSubview:self.WCLlabel];
     //日期
     self.Datelabel = [[UILabel alloc]init];
@@ -84,8 +86,12 @@
     self.Datelabel.textAlignment = NSTextAlignmentLeft;
     self.Datelabel.textColor = [UIColor whiteColor];
     self.Datelabel.font = [UIFont systemFontOfSize:self.Datelabel.frame.size.height/25*14];
-    self.Datelabel.text = @"2016－07－18";
     [self.TView addSubview:self.Datelabel];
+    //当前日期
+    DateNowString *dateToday = [[DateNowString alloc]init];
+    [dateToday SetTitle];
+    self.Datelabel.text = dateToday.dateNow;
+    
     //天气
     self.TQlabel = [[UILabel alloc]init];
     self.TQlabel.frame = CGRectMake(self.TView.frame.size.width-self.TView.frame.size.height, self.TView.frame.size.height/4, self.TView.frame.size.height/6*5, self.TView.frame.size.height/24*5);
@@ -102,7 +108,6 @@
     self.WDlabel.font = [UIFont systemFontOfSize:self.WDlabel.frame.size.height/25*14];
     self.WDlabel.text = @"33～25℃";
     [self.TView addSubview:self.WDlabel];
-    
     
 }
 

@@ -60,7 +60,7 @@
     self.GCButton85.layer.masksToBounds = YES;
     self.GCButton85.layer.cornerRadius = self.GCButton85.bounds.size.height/10;
     [self.GCButton85 setTitle:@"85高程" forState:UIControlStateNormal];
-    self.GCButton85.font = [UIFont systemFontOfSize:self.GCButton85.bounds.size.height/3*2];
+    self.GCButton85.titleLabel.font = [UIFont systemFontOfSize:self.GCButton85.bounds.size.height/20*9];
     self.GCButton85.backgroundColor = [UIColor blueColor];
     [self.GCButton85 addTarget:self action:@selector(GCTouch85) forControlEvents:UIControlEventTouchDown];
     [GCView addSubview:self.GCButton85];
@@ -69,7 +69,7 @@
     self.GCButtonWC.layer.masksToBounds = YES;
     self.GCButtonWC.layer.cornerRadius = self.GCButtonWC.bounds.size.height/10;
     [self.GCButtonWC setTitle:@"吴淞高程" forState:UIControlStateNormal];
-    self.GCButtonWC.font = [UIFont systemFontOfSize:self.GCButtonWC.bounds.size.height/3*2];
+    self.GCButtonWC.titleLabel.font = [UIFont systemFontOfSize:self.GCButtonWC.bounds.size.height/20*9];
     [GCView addSubview:self.GCButtonWC];
     [self.GCButtonWC addTarget:self action:@selector(GCTouchWC) forControlEvents:UIControlEventTouchDown];
     [self SQXXTableViewAdd];

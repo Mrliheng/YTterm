@@ -7,7 +7,6 @@
 //
 
 #import "DQXQController.h"
-#import "GYLBTableViewCell.h"
 #import "XQ_XQViewController.h"
 @interface DQXQController ()<UITableViewDelegate,UITableViewDataSource>
 @property (strong,nonatomic) UITableView *XQGYTableView;
@@ -103,12 +102,40 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    GYLBTableViewCell *cell = (GYLBTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"GYLBTableViewCell"];
-    if (!cell) {
-        cell = (GYLBTableViewCell *)[[[NSBundle  mainBundle]  loadNibNamed:@"GYLBTableViewCell" owner:self options:nil]  lastObject];
+    NSString *CellIdentifier = @"DQXQCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if(!cell)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
-//    cell.GYLabel.font = [UIFont systemFontOfSize:self.XQGYTableView.bounds.size.height/15];
+    //设置cell.imageView大小
+    UIImage *icon = [UIImage imageNamed:@"1"];
+    float hi_value = self.view.bounds.size.height/24;
+    CGSize itemSize = CGSizeMake(hi_value, hi_value);
+    UIGraphicsBeginImageContextWithOptions(itemSize, NO,0.0);
+    CGRect imageRect = CGRectMake(0.0, 0.0, itemSize.width, itemSize.height);
+    [icon drawInRect:imageRect];
+    
+    cell.imageView.image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    //设置cell.textLabel
+    cell.textLabel.font = [UIFont systemFontOfSize:self.view.bounds.size.height/40];
+    cell.textLabel.textColor = [UIColor blackColor];
+    if (indexPath.row == 0 ) {
+        cell.textLabel.text = @"雨量站超预警 0个";
+    } else if (indexPath.row == 1){
+        cell.textLabel.text = @"水位超预警 0个";
+
+    }else if (indexPath.row == 2){
+        cell.textLabel.text = @"单站当日最大降雨量 0mm";
+    }else if (indexPath.row == 3){
+        cell.textLabel.text = @"单站当日1小时最大降雨量 0mm";
+    }else{
+        cell.textLabel.text = @"当日台风 0个";
+    }
     
     //自定义分隔线
     UIImageView *imageViewSepE = [[UIImageView alloc]initWithFrame:CGRectMake(0, self.XQGYTableView.bounds.size.height/5-1, self.view.bounds.size.width, 1)];

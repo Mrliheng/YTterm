@@ -7,7 +7,6 @@
 //
 
 #import "QXGTViewController.h"
-#import "GYLBTableViewCell.h"
 @interface QXGTViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property(strong,nonatomic) UITableView *QXGTTableView;
 
@@ -78,12 +77,29 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    GYLBTableViewCell *cell = (GYLBTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"GYLBTableViewCell"];
-    if (!cell) {
-        cell = (GYLBTableViewCell *)[[[NSBundle  mainBundle]  loadNibNamed:@"GYLBTableViewCell" owner:self options:nil]  lastObject];
+    NSString *CellIdentifier = @"QXGTCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if(!cell)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    //设置cell.textLabel
+    cell.textLabel.font = [UIFont systemFontOfSize:self.view.bounds.size.height/40];
+    cell.textLabel.textColor = [UIColor blackColor];
     
-    //    cell.GYLabel.font = [UIFont systemFontOfSize:self.XQGYTableView.bounds.size.height/15];
+    [cell.imageView setImage:[UIImage imageNamed:@"1"]];
+    if (indexPath.row == 0 ) {
+        cell.textLabel.text = @"天气预报";
+    } else if (indexPath.row == 1){
+        cell.textLabel.text = @"一小时降雨预报";
+    }else if (indexPath.row == 2){
+        cell.textLabel.text = @"三小时降雨预报";
+    }else if (indexPath.row == 3){
+        cell.textLabel.text = @"卫星云图";
+    }else{
+        cell.textLabel.text = @"气象雷达";
+    }
     
     //自定义分隔线
     UIImageView *imageViewSepE = [[UIImageView alloc]initWithFrame:CGRectMake(0, self.QXGTTableView.bounds.size.height/5-1, self.view.bounds.size.width, 1)];

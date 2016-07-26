@@ -7,8 +7,6 @@
 //
 
 #import "WorkViewController.h"
-#import "GYLBTableViewCell.h"
-
 #import "XQWorkViewController.h"
 @interface WorkViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (strong,nonatomic) UITableView *WorkTableView;
@@ -76,12 +74,27 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    GYLBTableViewCell *cell = (GYLBTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"GYLBTableViewCell"];
-    if (!cell) {
-        cell = (GYLBTableViewCell *)[[[NSBundle  mainBundle]  loadNibNamed:@"GYLBTableViewCell" owner:self options:nil]  lastObject];
+    NSString *CellIdentifier = @"workCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if(!cell)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    //设置cell.textLabel
+    cell.textLabel.font = [UIFont systemFontOfSize:self.view.bounds.size.height/40];
+    cell.textLabel.textColor = [UIColor blackColor];
     
-    //    cell.GYLabel.font = [UIFont systemFontOfSize:self.XQGYTableView.bounds.size.height/15];
+    [cell.imageView setImage:[UIImage imageNamed:@"1"]];
+    if (indexPath.row == 0 ) {
+        cell.textLabel.text = @"水库";
+    } else if (indexPath.row == 1){
+        cell.textLabel.text = @"山塘";
+    }else if (indexPath.row == 2){
+        cell.textLabel.text = @"水闸";
+    }
+    cell.textLabel.tag = 1012;
+    
     
     //自定义分隔线
     UIImageView *imageViewSepE = [[UIImageView alloc]initWithFrame:CGRectMake(0, self.WorkTableView.bounds.size.height/3-1, self.view.bounds.size.width, 1)];
@@ -95,7 +108,8 @@
     XQWorkViewController *xqWorkController = [[XQWorkViewController alloc]init];
     [self.navigationController pushViewController:xqWorkController animated:YES];
     //设置navigationItem.title(用tag值设置)
-    
+    UILabel *navLabel = (UILabel *)[self.view viewWithTag:1012];
+    xqWorkController.navigationItem.title = navLabel.text;
     [self.WorkTableView deselectRowAtIndexPath:[self.WorkTableView indexPathForSelectedRow] animated:YES];
 }
 

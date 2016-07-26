@@ -74,7 +74,6 @@
 {
     self.LINKTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height-64) style:UITableViewStylePlain];
     self.LINKTableView.tableFooterView.frame = CGRectZero;
-    self.LINKTableView.tableHeaderView.frame = CGRectZero;
     self.LINKTableView.separatorStyle = UITableViewCellSeparatorStyleNone;//分割线隐藏
     self.LINKTableView.backgroundColor = [UIColor whiteColor];
     self.LINKTableView.delegate = self;
@@ -83,6 +82,27 @@
 }
 
 //TableView代理
+#pragma mark -Section的Header的值
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    NSString *key = [indexArray objectAtIndex:section];
+    return key;
+}
+
+#pragma mark - Section header view
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UILabel *lab = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 20)];
+    lab.backgroundColor = [UIColor grayColor];
+    lab.text = [indexArray objectAtIndex:section];
+    lab.textColor = [UIColor whiteColor];
+    return lab;
+}
+#pragma mark -设置右方表格的索引数组
+-(NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
+{
+    return indexArray;
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.

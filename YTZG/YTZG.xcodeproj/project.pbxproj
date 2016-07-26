@@ -27,12 +27,11 @@
 		EBA0ECE21D38C6A7006C8730 /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = EBA0ECD61D38C6A7006C8730 /* 7.png */; };
 		EBA0ECE31D38C6A7006C8730 /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = EBA0ECD71D38C6A7006C8730 /* 8.png */; };
 		EBA0ECE41D38C6A7006C8730 /* 9.png in Resources */ = {isa = PBXBuildFile; fileRef = EBA0ECD81D38C6A7006C8730 /* 9.png */; };
-		EBC141761D3F135D00A20701 /* GYLBTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC141741D3F135D00A20701 /* GYLBTableViewCell.m */; };
-		EBC141771D3F135D00A20701 /* GYLBTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBC141751D3F135D00A20701 /* GYLBTableViewCell.xib */; };
 		EBC1417D1D3F531F00A20701 /* XQ_XQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC1417C1D3F531F00A20701 /* XQ_XQViewController.m */; };
 		EBC141801D3F597F00A20701 /* SetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC1417F1D3F597F00A20701 /* SetViewController.m */; };
 		EBC141831D3F771600A20701 /* WorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC141821D3F771600A20701 /* WorkViewController.m */; };
 		EBC141861D3F7A5F00A20701 /* FXJZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC141851D3F7A5F00A20701 /* FXJZViewController.m */; };
+		EBC262881D47571D007A6F9C /* DateNowString.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC262871D47571D007A6F9C /* DateNowString.m */; };
 		EBC5BC631D3DF5FE00A3E55A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBC5BC621D3DF5FE00A3E55A /* QuartzCore.framework */; };
 		EBC5BC651D3DF61100A3E55A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBC5BC641D3DF61100A3E55A /* Foundation.framework */; };
 		EBC5BC671D3DF62400A3E55A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBC5BC661D3DF62400A3E55A /* UIKit.framework */; };
@@ -137,9 +136,6 @@
 		EBA0ECD61D38C6A7006C8730 /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7.png; sourceTree = "<group>"; };
 		EBA0ECD71D38C6A7006C8730 /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8.png; sourceTree = "<group>"; };
 		EBA0ECD81D38C6A7006C8730 /* 9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 9.png; sourceTree = "<group>"; };
-		EBC141731D3F135D00A20701 /* GYLBTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYLBTableViewCell.h; sourceTree = "<group>"; };
-		EBC141741D3F135D00A20701 /* GYLBTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYLBTableViewCell.m; sourceTree = "<group>"; };
-		EBC141751D3F135D00A20701 /* GYLBTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GYLBTableViewCell.xib; sourceTree = "<group>"; };
 		EBC1417B1D3F531E00A20701 /* XQ_XQViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XQ_XQViewController.h; sourceTree = "<group>"; };
 		EBC1417C1D3F531F00A20701 /* XQ_XQViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XQ_XQViewController.m; sourceTree = "<group>"; };
 		EBC1417E1D3F597F00A20701 /* SetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetViewController.h; sourceTree = "<group>"; };
@@ -148,6 +144,8 @@
 		EBC141821D3F771600A20701 /* WorkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkViewController.m; sourceTree = "<group>"; };
 		EBC141841D3F7A5F00A20701 /* FXJZViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXJZViewController.h; sourceTree = "<group>"; };
 		EBC141851D3F7A5F00A20701 /* FXJZViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXJZViewController.m; sourceTree = "<group>"; };
+		EBC262861D47571D007A6F9C /* DateNowString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateNowString.h; sourceTree = "<group>"; };
+		EBC262871D47571D007A6F9C /* DateNowString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateNowString.m; sourceTree = "<group>"; };
 		EBC5BC621D3DF5FE00A3E55A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		EBC5BC641D3DF61100A3E55A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EBC5BC661D3DF62400A3E55A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -459,19 +457,8 @@
 		EBC1416B1D3F124E00A20701 /* cell控件 */ = {
 			isa = PBXGroup;
 			children = (
-				EBC1416D1D3F12EF00A20701 /* 概要列表控件 */,
 			);
 			name = "cell控件";
-			sourceTree = "<group>";
-		};
-		EBC1416D1D3F12EF00A20701 /* 概要列表控件 */ = {
-			isa = PBXGroup;
-			children = (
-				EBC141731D3F135D00A20701 /* GYLBTableViewCell.h */,
-				EBC141741D3F135D00A20701 /* GYLBTableViewCell.m */,
-				EBC141751D3F135D00A20701 /* GYLBTableViewCell.xib */,
-			);
-			name = "概要列表控件";
 			sourceTree = "<group>";
 		};
 		EBC141781D3F218E00A20701 /* 概要 */ = {
@@ -490,6 +477,23 @@
 				EBC1417C1D3F531F00A20701 /* XQ_XQViewController.m */,
 			);
 			name = "详情";
+			sourceTree = "<group>";
+		};
+		EBC262841D474E59007A6F9C /* 获取当前日期 */ = {
+			isa = PBXGroup;
+			children = (
+				EBC262861D47571D007A6F9C /* DateNowString.h */,
+				EBC262871D47571D007A6F9C /* DateNowString.m */,
+			);
+			name = "获取当前日期";
+			sourceTree = "<group>";
+		};
+		EBC262851D474E9C007A6F9C /* 数据 */ = {
+			isa = PBXGroup;
+			children = (
+				EBC262841D474E59007A6F9C /* 获取当前日期 */,
+			);
+			name = "数据";
 			sourceTree = "<group>";
 		};
 		EBC5BC711D3E110500A3E55A /* 图标 */ = {
@@ -552,6 +556,7 @@
 		EBEE81921D3471C100469462 /* YTZG */ = {
 			isa = PBXGroup;
 			children = (
+				EBC262851D474E9C007A6F9C /* 数据 */,
 				EBA0ECCB1D38C681006C8730 /* 图片 */,
 				EBA0ECB71D38C0AB006C8730 /* 主界面 */,
 				EBA0ECAD1D38BF99006C8730 /* 登陆界面 */,
@@ -819,7 +824,6 @@
 			files = (
 				EBA0ECE31D38C6A7006C8730 /* 8.png in Resources */,
 				EBF5052C1D421B7B00DE267F /* STHeiti-Light.ttc in Resources */,
-				EBC141771D3F135D00A20701 /* GYLBTableViewCell.xib in Resources */,
 				EBA0ECE41D38C6A7006C8730 /* 9.png in Resources */,
 				EBA0ECDF1D38C6A7006C8730 /* 4.png in Resources */,
 				EBEE81A31D3471C100469462 /* LaunchScreen.storyboard in Resources */,
@@ -879,8 +883,8 @@
 				EBEF38C81D41B7A400CA3A58 /* FXYAViewController.m in Sources */,
 				EBC141861D3F7A5F00A20701 /* FXJZViewController.m in Sources */,
 				EBEE82191D34801700469462 /* UIButton+AFNetworking.m in Sources */,
-				EBC141761D3F135D00A20701 /* GYLBTableViewCell.m in Sources */,
 				EBEE81981D3471C100469462 /* AppDelegate.m in Sources */,
+				EBC262881D47571D007A6F9C /* DateNowString.m in Sources */,
 				EBC1417D1D3F531F00A20701 /* XQ_XQViewController.m in Sources */,
 				EBEE82101D34801700469462 /* AFNetworkReachabilityManager.m in Sources */,
 				EBEE821C1D34801700469462 /* UIRefreshControl+AFNetworking.m in Sources */,

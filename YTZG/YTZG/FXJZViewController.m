@@ -7,7 +7,7 @@
 //
 
 #import "FXJZViewController.h"
-#import "GYLBTableViewCell.h"
+
 #import "XQFJViewController.h"
 @interface FXJZViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (strong,nonatomic) UITableView *FXJZTableView;
@@ -74,12 +74,28 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    GYLBTableViewCell *cell = (GYLBTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"GYLBTableViewCell"];
-    if (!cell) {
-        cell = (GYLBTableViewCell *)[[[NSBundle  mainBundle]  loadNibNamed:@"GYLBTableViewCell" owner:self options:nil]  lastObject];
+    NSString *CellIdentifier = @"FXJZCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if(!cell)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    //设置cell.textLabel
+    cell.textLabel.font = [UIFont systemFontOfSize:self.view.bounds.size.height/40];
+    cell.textLabel.textColor = [UIColor blackColor];
     
-    //    cell.GYLabel.font = [UIFont systemFontOfSize:self.XQGYTableView.bounds.size.height/15];
+    [cell.imageView setImage:[UIImage imageNamed:@"1"]];
+    cell.textLabel.tag = 1008;
+    if (indexPath.row == 0 ) {
+        cell.textLabel.text = @"地址灾害点";
+    } else if (indexPath.row == 1){
+        cell.textLabel.text = @"历史山洪灾害";
+    }else if (indexPath.row == 2){
+        cell.textLabel.text = @"安置点";
+    }else{
+        cell.textLabel.text = @"物资仓库";
+    }
     
     //自定义分隔线
     UIImageView *imageViewSepE = [[UIImageView alloc]initWithFrame:CGRectMake(0, self.FXJZTableView.bounds.size.height/4-1, self.view.bounds.size.width, 1)];
@@ -92,7 +108,8 @@
 {
     XQFJViewController *xqfjController = [[XQFJViewController alloc]init];
     [self.navigationController pushViewController:xqfjController animated:YES];
-
+    UILabel *navLabel = (UILabel *)[self.view viewWithTag:1008];
+    xqfjController.navigationItem.title = navLabel.text;
     [self.FXJZTableView deselectRowAtIndexPath:[self.FXJZTableView indexPathForSelectedRow] animated:YES];
 }
 

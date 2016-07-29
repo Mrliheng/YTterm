@@ -8,6 +8,10 @@
 
 #import "SW_ViewController.h"
 #import "DateNowString.h"
+
+
+#import "SHLineGraphView.h"
+#import "SHPlot.h"
 @interface SW_ViewController ()
 
 @end
@@ -32,6 +36,7 @@
     
     self.view.backgroundColor = [UIColor whiteColor];//背景颜色
     [self ButtonAdd];//label添加
+    [self ScrollViewAdd];//ScrollView添加
 }
 //返回上层界面
 -(void)touchPop
@@ -81,9 +86,75 @@
             TouchBt.frame = CGRectMake(jianju*4+self.view.bounds.size.width/64*33, y_value, self.view.bounds.size.width/64*11, h_value);
             [TouchBt setTitle:@"下一天" forState:UIControlStateNormal];
         }//下一天
+        
     }
 }
-
+//ScrollView添加
+-(void)ScrollViewAdd
+{
+    UIScrollView *SWScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(20, self.view.bounds.size.height/14, self.view.bounds.size.width*2+20, self.view.bounds.size.height/7*6)];
+    SWScrollView.showsHorizontalScrollIndicator = NO;
+    SWScrollView.showsVerticalScrollIndicator = NO;//隐藏滑动条
+    SWScrollView.contentSize = CGSizeMake(self.view.bounds.size.width*3+40, 0);//禁止竖直方向滑动
+    [self.view addSubview:SWScrollView];
+    
+    //折线图添加
+    SHLineGraphView *_lineGraph = [[SHLineGraphView alloc] initWithFrame:CGRectMake(0, 40, self.view.bounds.size.width*2,self.view.bounds.size.height/7*5)];
+    
+    NSDictionary *_themeAttributes = @{
+                                       kXAxisLabelColorKey : [UIColor colorWithRed:0.48 green:0.48 blue:0.49 alpha:0.4],
+                                       kXAxisLabelFontKey : [UIFont fontWithName:@"TrebuchetMS" size:10],
+                                       kYAxisLabelColorKey : [UIColor colorWithRed:0.48 green:0.48 blue:0.49 alpha:0.4],
+                                       kYAxisLabelFontKey : [UIFont fontWithName:@"TrebuchetMS" size:10],
+                                       kYAxisLabelSideMarginsKey : @20,
+                                       kPlotBackgroundLineColorKye : [UIColor colorWithRed:0.48 green:0.48 blue:0.49 alpha:0.4]
+                                       };
+    _lineGraph.themeAttributes = _themeAttributes;
+    _lineGraph.yAxisRange = @(22.30);//y周最大值
+    _lineGraph.yAxisSuffix = @"";//y轴单位
+    _lineGraph.xAxisValues = @[
+                               @{ @1 : @"00时" },
+                               @{ @2 : @"02时" },
+                               @{ @3 : @"04时" },
+                               @{ @4 : @"06时" },
+                               @{ @5 : @"08时" },
+                               @{ @6 : @"10时" },
+                               @{ @7 : @"12时" },
+                               @{ @8 : @"14时" },
+                               @{ @9 : @"16时" },
+                               @{ @10 : @"18时" },
+                               @{ @11 : @"20时" },
+                               @{ @12 : @"22时" }
+                               ];//x轴
+    SHPlot *_plot1 = [[SHPlot alloc] init];
+    _plot1.plottingValues = @[
+                              @{ @1 : @21.8 },
+                              @{ @2 : @21.33 },
+                              @{ @3 : @21.4 },
+                              @{ @4 : @22 },
+                              @{ @5 : @21.3 },
+                              @{ @6 : @21.8 },
+                              @{ @7 : @22.1 },
+                              @{ @8 : @22.1 },
+                              @{ @9 : @22.3 },
+                              @{ @10 : @21.22 },
+                              @{ @11 : @22.1 },
+                              @{ @12 : @22.3 }
+                              ];//各时间的值
+    NSDictionary *_plotThemeAttributes = @{
+                                           kPlotFillColorKey : [UIColor colorWithRed:0.47 green:0.75 blue:0.78 alpha:0.5],
+                                           kPlotStrokeWidthKey : @2,
+                                           kPlotStrokeColorKey : [UIColor colorWithRed:0.18 green:0.36 blue:0.41 alpha:1],
+                                           kPlotPointFillColorKey : [UIColor colorWithRed:0.18 green:0.36 blue:0.41 alpha:1],
+                                           kPlotPointValueFontKey : [UIFont fontWithName:@"TrebuchetMS" size:18]
+                                           };
+    
+    _plot1.plotThemeAttributes = _plotThemeAttributes;
+    [_lineGraph addPlot:_plot1];
+    [_lineGraph setupTheView];
+    
+    [SWScrollView addSubview:_lineGraph];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

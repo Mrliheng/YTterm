@@ -15,6 +15,10 @@
 		EB3184181D45A32900B246BB /* XQWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB3184171D45A32900B246BB /* XQWorkViewController.m */; };
 		EB4EC5B91D3BB00A00E24D1E /* BTView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB4EC5B81D3BB00A00E24D1E /* BTView.m */; };
 		EB4EC5BC1D3BB23400E24D1E /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB4EC5BB1D3BB23400E24D1E /* MainViewController.m */; };
+		EB691F5D1D4B421E0004732B /* PopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB691F541D4B421E0004732B /* PopoverView.m */; };
+		EB691F5E1D4B421E0004732B /* SHLineGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB691F581D4B421E0004732B /* SHLineGraphView.m */; };
+		EB691F5F1D4B421E0004732B /* SHPlot.m in Sources */ = {isa = PBXBuildFile; fileRef = EB691F5A1D4B421E0004732B /* SHPlot.m */; };
+		EB691F641D4B50AE0004732B /* zzGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB691F631D4B50AE0004732B /* zzGraphViewController.m */; };
 		EBA0ECD91D38C6A7006C8730 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = EBA0ECCD1D38C6A7006C8730 /* 1.png */; };
 		EBA0ECDA1D38C6A7006C8730 /* 10.png in Resources */ = {isa = PBXBuildFile; fileRef = EBA0ECCE1D38C6A7006C8730 /* 10.png */; };
 		EBA0ECDB1D38C6A7006C8730 /* 11.png in Resources */ = {isa = PBXBuildFile; fileRef = EBA0ECCF1D38C6A7006C8730 /* 11.png */; };
@@ -124,6 +128,16 @@
 		EB4EC5B81D3BB00A00E24D1E /* BTView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTView.m; sourceTree = "<group>"; };
 		EB4EC5BA1D3BB23400E24D1E /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		EB4EC5BB1D3BB23400E24D1E /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		EB691F531D4B421E0004732B /* PopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverView.h; sourceTree = "<group>"; };
+		EB691F541D4B421E0004732B /* PopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverView.m; sourceTree = "<group>"; };
+		EB691F551D4B421E0004732B /* PopoverView_Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverView_Configuration.h; sourceTree = "<group>"; };
+		EB691F561D4B421E0004732B /* PopoverViewCompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverViewCompatibility.h; sourceTree = "<group>"; };
+		EB691F571D4B421E0004732B /* SHLineGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHLineGraphView.h; sourceTree = "<group>"; };
+		EB691F581D4B421E0004732B /* SHLineGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHLineGraphView.m; sourceTree = "<group>"; };
+		EB691F591D4B421E0004732B /* SHPlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHPlot.h; sourceTree = "<group>"; };
+		EB691F5A1D4B421E0004732B /* SHPlot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHPlot.m; sourceTree = "<group>"; };
+		EB691F621D4B50AE0004732B /* zzGraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zzGraphViewController.h; sourceTree = "<group>"; };
+		EB691F631D4B50AE0004732B /* zzGraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zzGraphViewController.m; sourceTree = "<group>"; };
 		EBA0ECCD1D38C6A7006C8730 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		EBA0ECCE1D38C6A7006C8730 /* 10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 10.png; sourceTree = "<group>"; };
 		EBA0ECCF1D38C6A7006C8730 /* 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 11.png; sourceTree = "<group>"; };
@@ -266,6 +280,7 @@
 			children = (
 				EB1C56271D409B950004AB2F /* YLViewController.h */,
 				EB1C56281D409B950004AB2F /* YLViewController.m */,
+				EB691F611D4B4E420004732B /* 柱状图 */,
 			);
 			name = "雨量柱状图";
 			sourceTree = "<group>";
@@ -275,8 +290,41 @@
 			children = (
 				EB1C562E1D40C1AD0004AB2F /* SW_ViewController.h */,
 				EB1C562F1D40C1AD0004AB2F /* SW_ViewController.m */,
+				EB691F511D4B41F80004732B /* 折线图 */,
 			);
 			name = "水位折线图";
+			sourceTree = "<group>";
+		};
+		EB691F511D4B41F80004732B /* 折线图 */ = {
+			isa = PBXGroup;
+			children = (
+				EB691F521D4B421E0004732B /* SHLineGraphView */,
+			);
+			name = "折线图";
+			sourceTree = "<group>";
+		};
+		EB691F521D4B421E0004732B /* SHLineGraphView */ = {
+			isa = PBXGroup;
+			children = (
+				EB691F531D4B421E0004732B /* PopoverView.h */,
+				EB691F541D4B421E0004732B /* PopoverView.m */,
+				EB691F551D4B421E0004732B /* PopoverView_Configuration.h */,
+				EB691F561D4B421E0004732B /* PopoverViewCompatibility.h */,
+				EB691F571D4B421E0004732B /* SHLineGraphView.h */,
+				EB691F581D4B421E0004732B /* SHLineGraphView.m */,
+				EB691F591D4B421E0004732B /* SHPlot.h */,
+				EB691F5A1D4B421E0004732B /* SHPlot.m */,
+			);
+			path = SHLineGraphView;
+			sourceTree = "<group>";
+		};
+		EB691F611D4B4E420004732B /* 柱状图 */ = {
+			isa = PBXGroup;
+			children = (
+				EB691F621D4B50AE0004732B /* zzGraphViewController.h */,
+				EB691F631D4B50AE0004732B /* zzGraphViewController.m */,
+			);
+			name = "柱状图";
 			sourceTree = "<group>";
 		};
 		EBA0ECAD1D38BF99006C8730 /* 登陆界面 */ = {
@@ -881,6 +929,7 @@
 				EBEE821A1D34801700469462 /* UIImageView+AFNetworking.m in Sources */,
 				EBEE819B1D3471C100469462 /* ViewController.m in Sources */,
 				EBEF38C81D41B7A400CA3A58 /* FXYAViewController.m in Sources */,
+				EB691F5D1D4B421E0004732B /* PopoverView.m in Sources */,
 				EBC141861D3F7A5F00A20701 /* FXJZViewController.m in Sources */,
 				EBEE82191D34801700469462 /* UIButton+AFNetworking.m in Sources */,
 				EBEE81981D3471C100469462 /* AppDelegate.m in Sources */,
@@ -889,6 +938,7 @@
 				EBEE82101D34801700469462 /* AFNetworkReachabilityManager.m in Sources */,
 				EBEE821C1D34801700469462 /* UIRefreshControl+AFNetworking.m in Sources */,
 				EBC5BC6D1D3E034100A3E55A /* DQXQController.m in Sources */,
+				EB691F5F1D4B421E0004732B /* SHPlot.m in Sources */,
 				EBE25A3E1D45BB810078A073 /* XQFJViewController.m in Sources */,
 				EBEE81951D3471C100469462 /* main.m in Sources */,
 				EBEE82151D34801700469462 /* AFAutoPurgingImageCache.m in Sources */,
@@ -902,12 +952,14 @@
 				EBEE82121D34801700469462 /* AFURLRequestSerialization.m in Sources */,
 				EBEE82171D34801700469462 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				EBEF38C11D41AC6600CA3A58 /* XQX_ViewController.m in Sources */,
+				EB691F641D4B50AE0004732B /* zzGraphViewController.m in Sources */,
 				EBEE82131D34801700469462 /* AFURLResponseSerialization.m in Sources */,
 				EBEE820F1D34801700469462 /* AFHTTPSessionManager.m in Sources */,
 				EB1C56291D409B950004AB2F /* YLViewController.m in Sources */,
 				EBEF38CF1D41BCC700CA3A58 /* YJDXViewController.m in Sources */,
 				EBEE82161D34801700469462 /* AFImageDownloader.m in Sources */,
 				EBEF38C51D41B31B00CA3A58 /* LINKViewController.m in Sources */,
+				EB691F5E1D4B421E0004732B /* SHLineGraphView.m in Sources */,
 				EBEE82181D34801700469462 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

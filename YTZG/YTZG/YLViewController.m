@@ -8,8 +8,9 @@
 
 #import "YLViewController.h"
 #import "DateNowString.h"
+#import "zzGraphViewController.h"
 @interface YLViewController ()
-
+@property (nonatomic, retain) zzGraphViewController *iPhoneGraph;
 @end
 
 @implementation YLViewController
@@ -33,7 +34,7 @@
     
     self.view.backgroundColor = [UIColor whiteColor];//背景颜色
     [self ButtonAdd];//label添加
-
+    [self zzViewAdd];// 柱状图添加
 }
 
 
@@ -88,6 +89,17 @@
         }//下一天
     }
     
+}
+
+-(void)zzViewAdd
+{
+    _iPhoneGraph = [[zzGraphViewController alloc]init];
+    _iPhoneGraph.secondArray = @[[NSNumber numberWithDouble:-0.30],[NSNumber numberWithDouble:-0.23],[NSNumber numberWithDouble:0.12],[NSNumber numberWithDouble:-0.34],[NSNumber numberWithDouble:0.21],[NSNumber numberWithDouble:0.32],[NSNumber numberWithDouble:-0.43],[NSNumber numberWithDouble:-0.12],[NSNumber numberWithDouble:0.34],[NSNumber numberWithDouble:0.43],[NSNumber numberWithDouble:0.40],[NSNumber numberWithDouble:0.50]];
+    
+    [_iPhoneGraph setFrame:CGRectMake(20,self.view.bounds.size.height/7, self.view.bounds.size.width, self.view.bounds.size.height/7*6)];
+    
+    [_iPhoneGraph setLinesGraph:NO];
+    [self.view addSubview:_iPhoneGraph];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

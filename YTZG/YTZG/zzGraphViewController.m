@@ -21,7 +21,7 @@
 }
 
 - (void)drawRect:(CGRect)rect {
-    float maxY = 0;
+    float maxY = 0.5;
     bool  minusValue = NO;
     bool nothingShow = NO;
     

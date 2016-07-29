@@ -94,7 +94,7 @@
 -(void)zzViewAdd
 {
     _iPhoneGraph = [[zzGraphViewController alloc]init];
-    _iPhoneGraph.secondArray = @[[NSNumber numberWithDouble:-0.30],[NSNumber numberWithDouble:-0.23],[NSNumber numberWithDouble:0.12],[NSNumber numberWithDouble:-0.34],[NSNumber numberWithDouble:0.21],[NSNumber numberWithDouble:0.32],[NSNumber numberWithDouble:-0.43],[NSNumber numberWithDouble:-0.12],[NSNumber numberWithDouble:0.34],[NSNumber numberWithDouble:0.43],[NSNumber numberWithDouble:0.40],[NSNumber numberWithDouble:0.50]];
+    _iPhoneGraph.secondArray = @[[NSNumber numberWithDouble:-0.30],[NSNumber numberWithDouble:-0.23],[NSNumber numberWithDouble:0.12],[NSNumber numberWithDouble:-0.34],[NSNumber numberWithDouble:0.21],[NSNumber numberWithDouble:0.32],[NSNumber numberWithDouble:-0.43],[NSNumber numberWithDouble:-0.12],[NSNumber numberWithDouble:0.34],[NSNumber numberWithDouble:0.43],[NSNumber numberWithDouble:0.40],[NSNumber numberWithDouble:0.80]];
     
     [_iPhoneGraph setFrame:CGRectMake(20,self.view.bounds.size.height/7, self.view.bounds.size.width, self.view.bounds.size.height/7*6)];
     

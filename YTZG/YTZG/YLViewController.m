@@ -8,9 +8,9 @@
 
 #import "YLViewController.h"
 #import "DateNowString.h"
-#import "zzGraphViewController.h"
+#import "ZFChart.h"
 @interface YLViewController ()
-@property (nonatomic, retain) zzGraphViewController *iPhoneGraph;
+
 @end
 
 @implementation YLViewController
@@ -91,15 +91,16 @@
     
 }
 
+
 -(void)zzViewAdd
 {
-    _iPhoneGraph = [[zzGraphViewController alloc]init];
-    _iPhoneGraph.secondArray = @[[NSNumber numberWithDouble:-0.30],[NSNumber numberWithDouble:-0.23],[NSNumber numberWithDouble:0.12],[NSNumber numberWithDouble:-0.34],[NSNumber numberWithDouble:0.21],[NSNumber numberWithDouble:0.32],[NSNumber numberWithDouble:-0.43],[NSNumber numberWithDouble:-0.12],[NSNumber numberWithDouble:0.34],[NSNumber numberWithDouble:0.43],[NSNumber numberWithDouble:0.40],[NSNumber numberWithDouble:0.80]];
-    
-    [_iPhoneGraph setFrame:CGRectMake(20,self.view.bounds.size.height/7, self.view.bounds.size.width, self.view.bounds.size.height/7*6)];
-    
-    [_iPhoneGraph setLinesGraph:NO];
-    [self.view addSubview:_iPhoneGraph];
+    ZFBarChart * barChart = [[ZFBarChart alloc] initWithFrame:CGRectMake(0, self.view.bounds.size.height/14, SCREEN_WIDTH, self.view.bounds.size.height/7*6)];
+    barChart.xLineValueArray = [NSMutableArray arrayWithObjects:@"30", @"197", @"200", @"193", @"236", @"217",@"30", @"197", @"200", @"193", @"236", @"217", nil];
+    barChart.xLineTitleArray = [NSMutableArray arrayWithObjects:@"1日8时", @"2日8时", @"3日8时", @"4日8时", @"5日8时", @"6日8时",@"7日8时", @"8日8时", @"9日8时", @"10日8时", @"11日8时", @"12日8时", nil];
+    barChart.yLineMaxValue = 250;
+    barChart.yLineSectionCount = 10;
+    [self.view addSubview:barChart];
+    [barChart strokePath];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

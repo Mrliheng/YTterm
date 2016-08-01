@@ -18,7 +18,6 @@
 		EB691F5D1D4B421E0004732B /* PopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB691F541D4B421E0004732B /* PopoverView.m */; };
 		EB691F5E1D4B421E0004732B /* SHLineGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB691F581D4B421E0004732B /* SHLineGraphView.m */; };
 		EB691F5F1D4B421E0004732B /* SHPlot.m in Sources */ = {isa = PBXBuildFile; fileRef = EB691F5A1D4B421E0004732B /* SHPlot.m */; };
-		EB691F641D4B50AE0004732B /* zzGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB691F631D4B50AE0004732B /* zzGraphViewController.m */; };
 		EBA0ECD91D38C6A7006C8730 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = EBA0ECCD1D38C6A7006C8730 /* 1.png */; };
 		EBA0ECDA1D38C6A7006C8730 /* 10.png in Resources */ = {isa = PBXBuildFile; fileRef = EBA0ECCE1D38C6A7006C8730 /* 10.png */; };
 		EBA0ECDB1D38C6A7006C8730 /* 11.png in Resources */ = {isa = PBXBuildFile; fileRef = EBA0ECCF1D38C6A7006C8730 /* 11.png */; };
@@ -47,6 +46,20 @@
 		EBE25A411D45C6C50078A073 /* SXFJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE25A401D45C6C50078A073 /* SXFJViewController.m */; };
 		EBE25A461D45DFE60078A073 /* pinyin.c in Sources */ = {isa = PBXBuildFile; fileRef = EBE25A441D45DFE60078A073 /* pinyin.c */; };
 		EBE25A491D45E5510078A073 /* ChineseString.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE25A481D45E5510078A073 /* ChineseString.m */; };
+		EBE299331D4F488F006A45CC /* NSString+Zirkfied.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE299111D4F488E006A45CC /* NSString+Zirkfied.m */; };
+		EBE299341D4F488F006A45CC /* UIColor+Zirkfied.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE299131D4F488E006A45CC /* UIColor+Zirkfied.m */; };
+		EBE299351D4F488F006A45CC /* UIView+Zirkfied.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE299151D4F488E006A45CC /* UIView+Zirkfied.m */; };
+		EBE299361D4F488F006A45CC /* ZFConst.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE2991A1D4F488E006A45CC /* ZFConst.m */; };
+		EBE299371D4F488F006A45CC /* ZFBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE2991D1D4F488E006A45CC /* ZFBar.m */; };
+		EBE299381D4F488F006A45CC /* ZFBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE2991F1D4F488E006A45CC /* ZFBarChart.m */; };
+		EBE299391D4F488F006A45CC /* ZFAxisLine.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE299221D4F488E006A45CC /* ZFAxisLine.m */; };
+		EBE2993A1D4F488F006A45CC /* ZFGenericChart.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE299241D4F488E006A45CC /* ZFGenericChart.m */; };
+		EBE2993B1D4F488F006A45CC /* ZFLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE299261D4F488E006A45CC /* ZFLabel.m */; };
+		EBE2993C1D4F488F006A45CC /* ZFCirque.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE299291D4F488E006A45CC /* ZFCirque.m */; };
+		EBE2993D1D4F488F006A45CC /* ZFLine.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE2992B1D4F488F006A45CC /* ZFLine.m */; };
+		EBE2993E1D4F488F006A45CC /* ZFLineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE2992D1D4F488F006A45CC /* ZFLineChart.m */; };
+		EBE2993F1D4F488F006A45CC /* ZFPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE299301D4F488F006A45CC /* ZFPieChart.m */; };
+		EBE299401D4F488F006A45CC /* ZFTranslucencePath.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE299321D4F488F006A45CC /* ZFTranslucencePath.m */; };
 		EBEE81951D3471C100469462 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EBEE81941D3471C100469462 /* main.m */; };
 		EBEE81981D3471C100469462 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EBEE81971D3471C100469462 /* AppDelegate.m */; };
 		EBEE819B1D3471C100469462 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBEE819A1D3471C100469462 /* ViewController.m */; };
@@ -136,8 +149,6 @@
 		EB691F581D4B421E0004732B /* SHLineGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHLineGraphView.m; sourceTree = "<group>"; };
 		EB691F591D4B421E0004732B /* SHPlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHPlot.h; sourceTree = "<group>"; };
 		EB691F5A1D4B421E0004732B /* SHPlot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHPlot.m; sourceTree = "<group>"; };
-		EB691F621D4B50AE0004732B /* zzGraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zzGraphViewController.h; sourceTree = "<group>"; };
-		EB691F631D4B50AE0004732B /* zzGraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zzGraphViewController.m; sourceTree = "<group>"; };
 		EBA0ECCD1D38C6A7006C8730 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		EBA0ECCE1D38C6A7006C8730 /* 10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 10.png; sourceTree = "<group>"; };
 		EBA0ECCF1D38C6A7006C8730 /* 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 11.png; sourceTree = "<group>"; };
@@ -177,6 +188,36 @@
 		EBE25A451D45DFE60078A073 /* pinyin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pinyin.h; sourceTree = "<group>"; };
 		EBE25A471D45E5510078A073 /* ChineseString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseString.h; sourceTree = "<group>"; };
 		EBE25A481D45E5510078A073 /* ChineseString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChineseString.m; sourceTree = "<group>"; };
+		EBE299101D4F488E006A45CC /* NSString+Zirkfied.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Zirkfied.h"; sourceTree = "<group>"; };
+		EBE299111D4F488E006A45CC /* NSString+Zirkfied.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Zirkfied.m"; sourceTree = "<group>"; };
+		EBE299121D4F488E006A45CC /* UIColor+Zirkfied.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Zirkfied.h"; sourceTree = "<group>"; };
+		EBE299131D4F488E006A45CC /* UIColor+Zirkfied.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Zirkfied.m"; sourceTree = "<group>"; };
+		EBE299141D4F488E006A45CC /* UIView+Zirkfied.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Zirkfied.h"; sourceTree = "<group>"; };
+		EBE299151D4F488E006A45CC /* UIView+Zirkfied.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Zirkfied.m"; sourceTree = "<group>"; };
+		EBE299171D4F488E006A45CC /* ZFChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFChart.h; sourceTree = "<group>"; };
+		EBE299181D4F488E006A45CC /* ZFColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFColor.h; sourceTree = "<group>"; };
+		EBE299191D4F488E006A45CC /* ZFConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFConst.h; sourceTree = "<group>"; };
+		EBE2991A1D4F488E006A45CC /* ZFConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFConst.m; sourceTree = "<group>"; };
+		EBE2991C1D4F488E006A45CC /* ZFBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFBar.h; sourceTree = "<group>"; };
+		EBE2991D1D4F488E006A45CC /* ZFBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFBar.m; sourceTree = "<group>"; };
+		EBE2991E1D4F488E006A45CC /* ZFBarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFBarChart.h; sourceTree = "<group>"; };
+		EBE2991F1D4F488E006A45CC /* ZFBarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFBarChart.m; sourceTree = "<group>"; };
+		EBE299211D4F488E006A45CC /* ZFAxisLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFAxisLine.h; sourceTree = "<group>"; };
+		EBE299221D4F488E006A45CC /* ZFAxisLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFAxisLine.m; sourceTree = "<group>"; };
+		EBE299231D4F488E006A45CC /* ZFGenericChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFGenericChart.h; sourceTree = "<group>"; };
+		EBE299241D4F488E006A45CC /* ZFGenericChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFGenericChart.m; sourceTree = "<group>"; };
+		EBE299251D4F488E006A45CC /* ZFLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFLabel.h; sourceTree = "<group>"; };
+		EBE299261D4F488E006A45CC /* ZFLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFLabel.m; sourceTree = "<group>"; };
+		EBE299281D4F488E006A45CC /* ZFCirque.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFCirque.h; sourceTree = "<group>"; };
+		EBE299291D4F488E006A45CC /* ZFCirque.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFCirque.m; sourceTree = "<group>"; };
+		EBE2992A1D4F488F006A45CC /* ZFLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFLine.h; sourceTree = "<group>"; };
+		EBE2992B1D4F488F006A45CC /* ZFLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFLine.m; sourceTree = "<group>"; };
+		EBE2992C1D4F488F006A45CC /* ZFLineChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFLineChart.h; sourceTree = "<group>"; };
+		EBE2992D1D4F488F006A45CC /* ZFLineChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFLineChart.m; sourceTree = "<group>"; };
+		EBE2992F1D4F488F006A45CC /* ZFPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFPieChart.h; sourceTree = "<group>"; };
+		EBE299301D4F488F006A45CC /* ZFPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFPieChart.m; sourceTree = "<group>"; };
+		EBE299311D4F488F006A45CC /* ZFTranslucencePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFTranslucencePath.h; sourceTree = "<group>"; };
+		EBE299321D4F488F006A45CC /* ZFTranslucencePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFTranslucencePath.m; sourceTree = "<group>"; };
 		EBEE81901D3471C100469462 /* YTZG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YTZG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBEE81941D3471C100469462 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EBEE81961D3471C100469462 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -280,7 +321,7 @@
 			children = (
 				EB1C56271D409B950004AB2F /* YLViewController.h */,
 				EB1C56281D409B950004AB2F /* YLViewController.m */,
-				EB691F611D4B4E420004732B /* 柱状图 */,
+				EBE2990D1D4F485B006A45CC /* 柱状图 */,
 			);
 			name = "雨量柱状图";
 			sourceTree = "<group>";
@@ -316,15 +357,6 @@
 				EB691F5A1D4B421E0004732B /* SHPlot.m */,
 			);
 			path = SHLineGraphView;
-			sourceTree = "<group>";
-		};
-		EB691F611D4B4E420004732B /* 柱状图 */ = {
-			isa = PBXGroup;
-			children = (
-				EB691F621D4B50AE0004732B /* zzGraphViewController.h */,
-				EB691F631D4B50AE0004732B /* zzGraphViewController.m */,
-			);
-			name = "柱状图";
 			sourceTree = "<group>";
 		};
 		EBA0ECAD1D38BF99006C8730 /* 登陆界面 */ = {
@@ -568,6 +600,99 @@
 				EBE25A451D45DFE60078A073 /* pinyin.h */,
 			);
 			path = pinyin;
+			sourceTree = "<group>";
+		};
+		EBE2990D1D4F485B006A45CC /* 柱状图 */ = {
+			isa = PBXGroup;
+			children = (
+				EBE2990E1D4F488E006A45CC /* ZFChart */,
+			);
+			name = "柱状图";
+			sourceTree = "<group>";
+		};
+		EBE2990E1D4F488E006A45CC /* ZFChart */ = {
+			isa = PBXGroup;
+			children = (
+				EBE2990F1D4F488E006A45CC /* Category */,
+				EBE299161D4F488E006A45CC /* Other */,
+				EBE2991B1D4F488E006A45CC /* ZFBarChart */,
+				EBE299201D4F488E006A45CC /* ZFGenericChart */,
+				EBE299271D4F488E006A45CC /* ZFLineChart */,
+				EBE2992E1D4F488F006A45CC /* ZFPieChart */,
+			);
+			path = ZFChart;
+			sourceTree = "<group>";
+		};
+		EBE2990F1D4F488E006A45CC /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				EBE299101D4F488E006A45CC /* NSString+Zirkfied.h */,
+				EBE299111D4F488E006A45CC /* NSString+Zirkfied.m */,
+				EBE299121D4F488E006A45CC /* UIColor+Zirkfied.h */,
+				EBE299131D4F488E006A45CC /* UIColor+Zirkfied.m */,
+				EBE299141D4F488E006A45CC /* UIView+Zirkfied.h */,
+				EBE299151D4F488E006A45CC /* UIView+Zirkfied.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		EBE299161D4F488E006A45CC /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				EBE299171D4F488E006A45CC /* ZFChart.h */,
+				EBE299181D4F488E006A45CC /* ZFColor.h */,
+				EBE299191D4F488E006A45CC /* ZFConst.h */,
+				EBE2991A1D4F488E006A45CC /* ZFConst.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		EBE2991B1D4F488E006A45CC /* ZFBarChart */ = {
+			isa = PBXGroup;
+			children = (
+				EBE2991C1D4F488E006A45CC /* ZFBar.h */,
+				EBE2991D1D4F488E006A45CC /* ZFBar.m */,
+				EBE2991E1D4F488E006A45CC /* ZFBarChart.h */,
+				EBE2991F1D4F488E006A45CC /* ZFBarChart.m */,
+			);
+			path = ZFBarChart;
+			sourceTree = "<group>";
+		};
+		EBE299201D4F488E006A45CC /* ZFGenericChart */ = {
+			isa = PBXGroup;
+			children = (
+				EBE299211D4F488E006A45CC /* ZFAxisLine.h */,
+				EBE299221D4F488E006A45CC /* ZFAxisLine.m */,
+				EBE299231D4F488E006A45CC /* ZFGenericChart.h */,
+				EBE299241D4F488E006A45CC /* ZFGenericChart.m */,
+				EBE299251D4F488E006A45CC /* ZFLabel.h */,
+				EBE299261D4F488E006A45CC /* ZFLabel.m */,
+			);
+			path = ZFGenericChart;
+			sourceTree = "<group>";
+		};
+		EBE299271D4F488E006A45CC /* ZFLineChart */ = {
+			isa = PBXGroup;
+			children = (
+				EBE299281D4F488E006A45CC /* ZFCirque.h */,
+				EBE299291D4F488E006A45CC /* ZFCirque.m */,
+				EBE2992A1D4F488F006A45CC /* ZFLine.h */,
+				EBE2992B1D4F488F006A45CC /* ZFLine.m */,
+				EBE2992C1D4F488F006A45CC /* ZFLineChart.h */,
+				EBE2992D1D4F488F006A45CC /* ZFLineChart.m */,
+			);
+			path = ZFLineChart;
+			sourceTree = "<group>";
+		};
+		EBE2992E1D4F488F006A45CC /* ZFPieChart */ = {
+			isa = PBXGroup;
+			children = (
+				EBE2992F1D4F488F006A45CC /* ZFPieChart.h */,
+				EBE299301D4F488F006A45CC /* ZFPieChart.m */,
+				EBE299311D4F488F006A45CC /* ZFTranslucencePath.h */,
+				EBE299321D4F488F006A45CC /* ZFTranslucencePath.m */,
+			);
+			path = ZFPieChart;
 			sourceTree = "<group>";
 		};
 		EBE866A71D3CB75300D84FC9 /* 主界面 */ = {
@@ -924,25 +1049,35 @@
 				EBEF38BC1D41A6EF00CA3A58 /* TXLViewController.m in Sources */,
 				EBEF38D31D41BDCE00CA3A58 /* MANViewController.m in Sources */,
 				EB1C56301D40C1AD0004AB2F /* SW_ViewController.m in Sources */,
+				EBE2993C1D4F488F006A45CC /* ZFCirque.m in Sources */,
+				EBE299381D4F488F006A45CC /* ZFBarChart.m in Sources */,
+				EBE299391D4F488F006A45CC /* ZFAxisLine.m in Sources */,
+				EBE299371D4F488F006A45CC /* ZFBar.m in Sources */,
+				EBE2993E1D4F488F006A45CC /* ZFLineChart.m in Sources */,
 				EB1C56231D4056C50004AB2F /* YQXXViewController.m in Sources */,
 				EBE25A461D45DFE60078A073 /* pinyin.c in Sources */,
 				EBEE821A1D34801700469462 /* UIImageView+AFNetworking.m in Sources */,
 				EBEE819B1D3471C100469462 /* ViewController.m in Sources */,
 				EBEF38C81D41B7A400CA3A58 /* FXYAViewController.m in Sources */,
 				EB691F5D1D4B421E0004732B /* PopoverView.m in Sources */,
+				EBE2993A1D4F488F006A45CC /* ZFGenericChart.m in Sources */,
 				EBC141861D3F7A5F00A20701 /* FXJZViewController.m in Sources */,
+				EBE299341D4F488F006A45CC /* UIColor+Zirkfied.m in Sources */,
 				EBEE82191D34801700469462 /* UIButton+AFNetworking.m in Sources */,
+				EBE299351D4F488F006A45CC /* UIView+Zirkfied.m in Sources */,
 				EBEE81981D3471C100469462 /* AppDelegate.m in Sources */,
 				EBC262881D47571D007A6F9C /* DateNowString.m in Sources */,
 				EBC1417D1D3F531F00A20701 /* XQ_XQViewController.m in Sources */,
 				EBEE82101D34801700469462 /* AFNetworkReachabilityManager.m in Sources */,
 				EBEE821C1D34801700469462 /* UIRefreshControl+AFNetworking.m in Sources */,
 				EBC5BC6D1D3E034100A3E55A /* DQXQController.m in Sources */,
+				EBE299331D4F488F006A45CC /* NSString+Zirkfied.m in Sources */,
 				EB691F5F1D4B421E0004732B /* SHPlot.m in Sources */,
 				EBE25A3E1D45BB810078A073 /* XQFJViewController.m in Sources */,
 				EBEE81951D3471C100469462 /* main.m in Sources */,
 				EBEE82151D34801700469462 /* AFAutoPurgingImageCache.m in Sources */,
 				EBEE82111D34801700469462 /* AFSecurityPolicy.m in Sources */,
+				EBE2993F1D4F488F006A45CC /* ZFPieChart.m in Sources */,
 				EB1C562C1D40A44E0004AB2F /* SQXXViewController.m in Sources */,
 				EBE25A3B1D45AAF40078A073 /* XQWAreaViewController.m in Sources */,
 				EB4EC5B91D3BB00A00E24D1E /* BTView.m in Sources */,
@@ -950,9 +1085,12 @@
 				EBE25A491D45E5510078A073 /* ChineseString.m in Sources */,
 				EBC141801D3F597F00A20701 /* SetViewController.m in Sources */,
 				EBEE82121D34801700469462 /* AFURLRequestSerialization.m in Sources */,
+				EBE2993B1D4F488F006A45CC /* ZFLabel.m in Sources */,
 				EBEE82171D34801700469462 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				EBE2993D1D4F488F006A45CC /* ZFLine.m in Sources */,
+				EBE299401D4F488F006A45CC /* ZFTranslucencePath.m in Sources */,
 				EBEF38C11D41AC6600CA3A58 /* XQX_ViewController.m in Sources */,
-				EB691F641D4B50AE0004732B /* zzGraphViewController.m in Sources */,
+				EBE299361D4F488F006A45CC /* ZFConst.m in Sources */,
 				EBEE82131D34801700469462 /* AFURLResponseSerialization.m in Sources */,
 				EBEE820F1D34801700469462 /* AFHTTPSessionManager.m in Sources */,
 				EB1C56291D409B950004AB2F /* YLViewController.m in Sources */,

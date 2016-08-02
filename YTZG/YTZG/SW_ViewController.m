@@ -9,7 +9,7 @@
 #import "SW_ViewController.h"
 #import "DateNowString.h"
 
-
+#import "zxLIneView.h"
 #import "SHLineGraphView.h"
 #import "SHPlot.h"
 @interface SW_ViewController ()
@@ -34,9 +34,19 @@
     UIBarButtonItem *backNavigationItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
     self.navigationItem.leftBarButtonItem = backNavigationItem;
     
+    //设置切换按钮
+    UIButton *SwitchButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    SwitchButton.frame = CGRectMake(0, 0, 20, 20);
+    [SwitchButton setImage:[UIImage imageNamed:@"drop4"] forState:UIControlStateNormal];
+    [SwitchButton addTarget:self action:@selector(SwitchSet) forControlEvents:UIControlEventTouchDown];
+    UIBarButtonItem *SwitchNavigationItem = [[UIBarButtonItem alloc] initWithCustomView:SwitchButton];
+    self.navigationItem.rightBarButtonItem = SwitchNavigationItem;
+    
     self.view.backgroundColor = [UIColor whiteColor];//背景颜色
     [self ButtonAdd];//label添加
     [self ScrollViewAdd];//ScrollView添加
+    [self zLineViewAdd];//自定义折线图添加
+    
 }
 //返回上层界面
 -(void)touchPop
@@ -46,11 +56,11 @@
 //日期、上一天、今日、下一天
 -(void)ButtonAdd
 {
-    float jianju = self.view.bounds.size.width/16;
-    float y_value = self.view.bounds.size.height/40;
-    float h_value = self.view.bounds.size.height/14;
+    float jianju = SCREEN_WIDTH/16;
+    float y_value = SCREEN_HEIGHT/40;
+    float h_value = SCREEN_HEIGHT/14;
     //日期label
-    UILabel *dateLabel = [[UILabel alloc]initWithFrame:CGRectMake(jianju, y_value, self.view.bounds.size.width/32*7, h_value)];
+    UILabel *dateLabel = [[UILabel alloc]initWithFrame:CGRectMake(jianju, y_value, SCREEN_WIDTH/32*7, h_value)];
     dateLabel.backgroundColor = [UIColor colorWithRed:0.96 green:0.96 blue:0.96 alpha:1.0];
     dateLabel.textColor = [UIColor blackColor];
     dateLabel.textAlignment = NSTextAlignmentCenter;
@@ -75,15 +85,15 @@
         TouchBt.layer.cornerRadius = h_value/5;
         [self.view addSubview:TouchBt];
         if (i==0) {
-            TouchBt.frame = CGRectMake(jianju*2+self.view.bounds.size.width/32*7, y_value, self.view.bounds.size.width/64*11, h_value);
+            TouchBt.frame = CGRectMake(jianju*2+SCREEN_WIDTH/32*7, y_value, SCREEN_WIDTH/64*11, h_value);
             [TouchBt setTitle:@"上一天" forState:UIControlStateNormal];
         }//上一天
         else if (i==1) {
-            TouchBt.frame = CGRectMake(jianju*3+self.view.bounds.size.width/64*25, y_value, self.view.bounds.size.width/8, h_value);
+            TouchBt.frame = CGRectMake(jianju*3+SCREEN_WIDTH/64*25, y_value, SCREEN_WIDTH/8, h_value);
             [TouchBt setTitle:@"今日" forState:UIControlStateNormal];
         }//今日
         else if (i==2) {
-            TouchBt.frame = CGRectMake(jianju*4+self.view.bounds.size.width/64*33, y_value, self.view.bounds.size.width/64*11, h_value);
+            TouchBt.frame = CGRectMake(jianju*4+SCREEN_WIDTH/64*33, y_value, SCREEN_WIDTH/64*11, h_value);
             [TouchBt setTitle:@"下一天" forState:UIControlStateNormal];
         }//下一天
         
@@ -92,14 +102,14 @@
 //ScrollView添加
 -(void)ScrollViewAdd
 {
-    UIScrollView *SWScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(20, self.view.bounds.size.height/14, self.view.bounds.size.width*2+20, self.view.bounds.size.height/7*6)];
+    UIScrollView *SWScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(20, SCREEN_HEIGHT/14, SCREEN_WIDTH*2+20, SCREEN_HEIGHT/7*6)];
     SWScrollView.showsHorizontalScrollIndicator = NO;
     SWScrollView.showsVerticalScrollIndicator = NO;//隐藏滑动条
-    SWScrollView.contentSize = CGSizeMake(self.view.bounds.size.width*3+40, 0);//禁止竖直方向滑动
+    SWScrollView.contentSize = CGSizeMake(SCREEN_WIDTH*3+40, 0);//禁止竖直方向滑动
     [self.view addSubview:SWScrollView];
     
     //折线图添加
-    SHLineGraphView *_lineGraph = [[SHLineGraphView alloc] initWithFrame:CGRectMake(0, 40, self.view.bounds.size.width*2,self.view.bounds.size.height/7*5)];
+    SHLineGraphView *_lineGraph = [[SHLineGraphView alloc] initWithFrame:CGRectMake(0, 40, SCREEN_WIDTH*2,SCREEN_HEIGHT/7*5)];
     
     NSDictionary *_themeAttributes = @{
                                        kXAxisLabelColorKey : [UIColor colorWithRed:0.48 green:0.48 blue:0.49 alpha:0.4],
@@ -154,6 +164,35 @@
     [_lineGraph setupTheView];
     
     [SWScrollView addSubview:_lineGraph];
+}
+
+//自定义折线图添加
+-(void)zLineViewAdd
+{
+    zxLIneView *zxView = [[zxLIneView alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT/14*15, SCREEN_WIDTH, SCREEN_HEIGHT/7*6-64)];
+    [self.view addSubview:zxView];
+}
+
+-(void)SwitchSet
+{
+    if (self.view.frame.origin.y == 0 || self.view.frame.origin.y == 64) {
+        NSTimeInterval animationDuration = 0.30f;
+        [UIView beginAnimations:@ "ResizeForKeyboard"  context:nil];
+        [UIView setAnimationDuration:animationDuration];
+        
+        //将视图的Y坐标向上移动，以使下面腾出地方用于软键盘的显示
+        self.view.frame = CGRectMake(0, -SCREEN_HEIGHT+64, SCREEN_WIDTH, SCREEN_HEIGHT*2); //64-216
+        [UIView commitAnimations];
+    }else{
+        NSTimeInterval animationDuration = 0.30f;
+        [UIView beginAnimations:@ "ResizeForKeyboard"  context:nil];
+        [UIView setAnimationDuration:animationDuration];
+        
+        //将视图的Y坐标向上移动，以使下面腾出地方用于软键盘的显示
+        self.view.frame = CGRectMake(0, 64, SCREEN_HEIGHT, SCREEN_HEIGHT*2); //64-216
+        [UIView commitAnimations];
+    }
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

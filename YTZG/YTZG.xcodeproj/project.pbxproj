@@ -41,6 +41,8 @@
 		EBC5BC691D3DF63F00A3E55A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBC5BC681D3DF63F00A3E55A /* CoreGraphics.framework */; };
 		EBC5BC6D1D3E034100A3E55A /* DQXQController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBC5BC6B1D3E034100A3E55A /* DQXQController.m */; };
 		EBC5BC731D3E197100A3E55A /* nav_back.png in Resources */ = {isa = PBXBuildFile; fileRef = EBC5BC721D3E197100A3E55A /* nav_back.png */; };
+		EBDB48FA1D5026E10029FEE8 /* drop4.png in Resources */ = {isa = PBXBuildFile; fileRef = EBDB48F91D5026E10029FEE8 /* drop4.png */; };
+		EBDB49011D5072E30029FEE8 /* zxLIneView.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDB49001D5072E30029FEE8 /* zxLIneView.m */; };
 		EBE25A3B1D45AAF40078A073 /* XQWAreaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE25A3A1D45AAF40078A073 /* XQWAreaViewController.m */; };
 		EBE25A3E1D45BB810078A073 /* XQFJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE25A3D1D45BB810078A073 /* XQFJViewController.m */; };
 		EBE25A411D45C6C50078A073 /* SXFJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE25A401D45C6C50078A073 /* SXFJViewController.m */; };
@@ -178,6 +180,9 @@
 		EBC5BC6A1D3E034100A3E55A /* DQXQController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQXQController.h; sourceTree = "<group>"; };
 		EBC5BC6B1D3E034100A3E55A /* DQXQController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQXQController.m; sourceTree = "<group>"; };
 		EBC5BC721D3E197100A3E55A /* nav_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_back.png; sourceTree = "<group>"; };
+		EBDB48F91D5026E10029FEE8 /* drop4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drop4.png; sourceTree = "<group>"; };
+		EBDB48FF1D5072E30029FEE8 /* zxLIneView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zxLIneView.h; sourceTree = "<group>"; };
+		EBDB49001D5072E30029FEE8 /* zxLIneView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zxLIneView.m; sourceTree = "<group>"; };
 		EBE25A391D45AAF40078A073 /* XQWAreaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XQWAreaViewController.h; sourceTree = "<group>"; };
 		EBE25A3A1D45AAF40078A073 /* XQWAreaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XQWAreaViewController.m; sourceTree = "<group>"; };
 		EBE25A3C1D45BB810078A073 /* XQFJViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XQFJViewController.h; sourceTree = "<group>"; };
@@ -339,6 +344,7 @@
 		EB691F511D4B41F80004732B /* 折线图 */ = {
 			isa = PBXGroup;
 			children = (
+				EBDB48FB1D5070730029FEE8 /* 自定义折线图 */,
 				EB691F521D4B421E0004732B /* SHLineGraphView */,
 			);
 			name = "折线图";
@@ -579,10 +585,20 @@
 		EBC5BC711D3E110500A3E55A /* 图标 */ = {
 			isa = PBXGroup;
 			children = (
+				EBDB48F91D5026E10029FEE8 /* drop4.png */,
 				EBC5BC721D3E197100A3E55A /* nav_back.png */,
 				EB1C56241D40594C0004AB2F /* search-icon.png */,
 			);
 			name = "图标";
+			sourceTree = "<group>";
+		};
+		EBDB48FB1D5070730029FEE8 /* 自定义折线图 */ = {
+			isa = PBXGroup;
+			children = (
+				EBDB48FF1D5072E30029FEE8 /* zxLIneView.h */,
+				EBDB49001D5072E30029FEE8 /* zxLIneView.m */,
+			);
+			name = "自定义折线图";
 			sourceTree = "<group>";
 		};
 		EBE25A421D45DFB90078A073 /* 首字母排序 */ = {
@@ -1008,6 +1024,7 @@
 				EBF5052D1D421B7B00DE267F /* STHeiti-Medium.ttc in Resources */,
 				EBA0ECE11D38C6A7006C8730 /* 6.png in Resources */,
 				EBA0ECDE1D38C6A7006C8730 /* 3.png in Resources */,
+				EBDB48FA1D5026E10029FEE8 /* drop4.png in Resources */,
 				EBEE819E1D3471C100469462 /* Main.storyboard in Resources */,
 				EBA0ECDD1D38C6A7006C8730 /* 2.png in Resources */,
 				EB1C56251D40594C0004AB2F /* search-icon.png in Resources */,
@@ -1050,6 +1067,7 @@
 				EBEF38D31D41BDCE00CA3A58 /* MANViewController.m in Sources */,
 				EB1C56301D40C1AD0004AB2F /* SW_ViewController.m in Sources */,
 				EBE2993C1D4F488F006A45CC /* ZFCirque.m in Sources */,
+				EBDB49011D5072E30029FEE8 /* zxLIneView.m in Sources */,
 				EBE299381D4F488F006A45CC /* ZFBarChart.m in Sources */,
 				EBE299391D4F488F006A45CC /* ZFAxisLine.m in Sources */,
 				EBE299371D4F488F006A45CC /* ZFBar.m in Sources */,

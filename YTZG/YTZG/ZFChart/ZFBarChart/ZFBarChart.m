@@ -146,7 +146,7 @@
 - (void)strokePath{
     [self.genericChart strokePath];
     [self drawBar];
-    self.contentSize = CGSizeMake(CGRectGetWidth(self.genericChart.frame), self.frame.size.height);
+    self.contentSize = CGSizeMake(CGRectGetWidth(self.genericChart.frame)+40, self.frame.size.height);
 }
 
 #pragma mark - UIScrollViewDelegate

@@ -20,9 +20,9 @@
     NSCalendar *cal = [NSCalendar currentCalendar];
     unsigned int unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMonth |NSCalendarUnitSecond;
     NSDateComponents *dd = [cal components:unitFlags fromDate:localDate];
-    int y = [dd year];
-    int m = [dd month];
-    int d = [dd day];
+    int y = (int)[dd year];
+    int m = (int)[dd month];
+    int d = (int)[dd day] ;
     _dateNow = [NSString stringWithFormat:@"%d-%d-%d",y,m,d];
     _MDdateNow = [NSString stringWithFormat:@"%d月%d日",m,d];
 }

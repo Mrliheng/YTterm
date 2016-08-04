@@ -93,6 +93,7 @@
 		EBEF38CC1D41B9D000CA3A58 /* YAXQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBEF38CB1D41B9D000CA3A58 /* YAXQViewController.m */; };
 		EBEF38CF1D41BCC700CA3A58 /* YJDXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBEF38CE1D41BCC700CA3A58 /* YJDXViewController.m */; };
 		EBEF38D31D41BDCE00CA3A58 /* MANViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBEF38D21D41BDCE00CA3A58 /* MANViewController.m */; };
+		EBF1ADF01D53201E009F4D89 /* ADPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF1ADEF1D53201E009F4D89 /* ADPopupView.m */; };
 		EBF5052C1D421B7B00DE267F /* STHeiti-Light.ttc in Resources */ = {isa = PBXBuildFile; fileRef = EBF5052A1D421B7B00DE267F /* STHeiti-Light.ttc */; };
 		EBF5052D1D421B7B00DE267F /* STHeiti-Medium.ttc in Resources */ = {isa = PBXBuildFile; fileRef = EBF5052B1D421B7B00DE267F /* STHeiti-Medium.ttc */; };
 /* End PBXBuildFile section */
@@ -288,6 +289,8 @@
 		EBEF38CE1D41BCC700CA3A58 /* YJDXViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJDXViewController.m; sourceTree = "<group>"; };
 		EBEF38D11D41BDCE00CA3A58 /* MANViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANViewController.h; sourceTree = "<group>"; };
 		EBEF38D21D41BDCE00CA3A58 /* MANViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANViewController.m; sourceTree = "<group>"; };
+		EBF1ADEE1D53201E009F4D89 /* ADPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADPopupView.h; sourceTree = "<group>"; };
+		EBF1ADEF1D53201E009F4D89 /* ADPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADPopupView.m; sourceTree = "<group>"; };
 		EBF5052A1D421B7B00DE267F /* STHeiti-Light.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "STHeiti-Light.ttc"; sourceTree = "<group>"; };
 		EBF5052B1D421B7B00DE267F /* STHeiti-Medium.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "STHeiti-Medium.ttc"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -790,6 +793,7 @@
 		EBEE81E91D347EB100469462 /* 第三方库 */ = {
 			isa = PBXGroup;
 			children = (
+				EBF1ADD81D52E12F009F4D89 /* 弹框 */,
 				EBE25A421D45DFB90078A073 /* 首字母排序 */,
 				EBF505281D421B4E00DE267F /* 第三方字体库 */,
 				EBC5BC681D3DF63F00A3E55A /* CoreGraphics.framework */,
@@ -888,6 +892,31 @@
 				EBEF38D21D41BDCE00CA3A58 /* MANViewController.m */,
 			);
 			name = "人员确定";
+			sourceTree = "<group>";
+		};
+		EBF1ADD81D52E12F009F4D89 /* 弹框 */ = {
+			isa = PBXGroup;
+			children = (
+				EBF1ADEC1D52E195009F4D89 /* 弹框 */,
+			);
+			name = "弹框";
+			sourceTree = "<group>";
+		};
+		EBF1ADEC1D52E195009F4D89 /* 弹框 */ = {
+			isa = PBXGroup;
+			children = (
+				EBF1ADED1D53201E009F4D89 /* Source */,
+			);
+			name = "弹框";
+			sourceTree = "<group>";
+		};
+		EBF1ADED1D53201E009F4D89 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				EBF1ADEE1D53201E009F4D89 /* ADPopupView.h */,
+				EBF1ADEF1D53201E009F4D89 /* ADPopupView.m */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 		EBF505281D421B4E00DE267F /* 第三方字体库 */ = {
@@ -1108,6 +1137,7 @@
 				EBE2993D1D4F488F006A45CC /* ZFLine.m in Sources */,
 				EBE299401D4F488F006A45CC /* ZFTranslucencePath.m in Sources */,
 				EBEF38C11D41AC6600CA3A58 /* XQX_ViewController.m in Sources */,
+				EBF1ADF01D53201E009F4D89 /* ADPopupView.m in Sources */,
 				EBE299361D4F488F006A45CC /* ZFConst.m in Sources */,
 				EBEE82131D34801700469462 /* AFURLResponseSerialization.m in Sources */,
 				EBEE820F1D34801700469462 /* AFHTTPSessionManager.m in Sources */,

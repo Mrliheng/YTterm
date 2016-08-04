@@ -188,7 +188,7 @@
   CGPathMoveToPoint(graphPath, NULL, _leftMarginToLeave, plot.xPoints[0].y);
   CGPathMoveToPoint(backgroundPath, NULL, _leftMarginToLeave, plot.xPoints[0].y);
   
-  int count = _xAxisValues.count;
+  int count = (int)_xAxisValues.count;
   for(int i=0; i< count; i++){
     CGPoint point = plot.xPoints[i];
     CGPathAddLineToPoint(graphPath, NULL, point.x, point.y);
@@ -239,7 +239,7 @@
 }
 
 - (void)drawXLabels:(SHPlot *)plot {
-  int xIntervalCount = _xAxisValues.count;
+  int xIntervalCount = (int)_xAxisValues.count;
   double xIntervalInPx = PLOT_WIDTH / _xAxisValues.count;
   
   //initialize actual x points values where the circle will be

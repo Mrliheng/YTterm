@@ -43,6 +43,9 @@
 		EBC5BC731D3E197100A3E55A /* nav_back.png in Resources */ = {isa = PBXBuildFile; fileRef = EBC5BC721D3E197100A3E55A /* nav_back.png */; };
 		EBDB48FA1D5026E10029FEE8 /* drop4.png in Resources */ = {isa = PBXBuildFile; fileRef = EBDB48F91D5026E10029FEE8 /* drop4.png */; };
 		EBDB49011D5072E30029FEE8 /* zxLIneView.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDB49001D5072E30029FEE8 /* zxLIneView.m */; };
+		EBDB8BA11D54183C004DB5B2 /* XTPopNormalView.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDB8B9B1D54183C004DB5B2 /* XTPopNormalView.m */; };
+		EBDB8BA21D54183C004DB5B2 /* XTPopTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDB8B9D1D54183C004DB5B2 /* XTPopTableView.m */; };
+		EBDB8BA31D54183C004DB5B2 /* XTPopViewBase.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDB8BA01D54183C004DB5B2 /* XTPopViewBase.m */; };
 		EBE25A3B1D45AAF40078A073 /* XQWAreaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE25A3A1D45AAF40078A073 /* XQWAreaViewController.m */; };
 		EBE25A3E1D45BB810078A073 /* XQFJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE25A3D1D45BB810078A073 /* XQFJViewController.m */; };
 		EBE25A411D45C6C50078A073 /* SXFJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE25A401D45C6C50078A073 /* SXFJViewController.m */; };
@@ -184,6 +187,13 @@
 		EBDB48F91D5026E10029FEE8 /* drop4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drop4.png; sourceTree = "<group>"; };
 		EBDB48FF1D5072E30029FEE8 /* zxLIneView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zxLIneView.h; sourceTree = "<group>"; };
 		EBDB49001D5072E30029FEE8 /* zxLIneView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zxLIneView.m; sourceTree = "<group>"; };
+		EBDB8B9A1D54183C004DB5B2 /* XTPopNormalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTPopNormalView.h; sourceTree = "<group>"; };
+		EBDB8B9B1D54183C004DB5B2 /* XTPopNormalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTPopNormalView.m; sourceTree = "<group>"; };
+		EBDB8B9C1D54183C004DB5B2 /* XTPopTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTPopTableView.h; sourceTree = "<group>"; };
+		EBDB8B9D1D54183C004DB5B2 /* XTPopTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTPopTableView.m; sourceTree = "<group>"; };
+		EBDB8B9E1D54183C004DB5B2 /* XTPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTPopView.h; sourceTree = "<group>"; };
+		EBDB8B9F1D54183C004DB5B2 /* XTPopViewBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTPopViewBase.h; sourceTree = "<group>"; };
+		EBDB8BA01D54183C004DB5B2 /* XTPopViewBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTPopViewBase.m; sourceTree = "<group>"; };
 		EBE25A391D45AAF40078A073 /* XQWAreaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XQWAreaViewController.h; sourceTree = "<group>"; };
 		EBE25A3A1D45AAF40078A073 /* XQWAreaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XQWAreaViewController.m; sourceTree = "<group>"; };
 		EBE25A3C1D45BB810078A073 /* XQFJViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XQFJViewController.h; sourceTree = "<group>"; };
@@ -604,6 +614,20 @@
 			name = "自定义折线图";
 			sourceTree = "<group>";
 		};
+		EBDB8B991D54183C004DB5B2 /* XTPopView */ = {
+			isa = PBXGroup;
+			children = (
+				EBDB8B9A1D54183C004DB5B2 /* XTPopNormalView.h */,
+				EBDB8B9B1D54183C004DB5B2 /* XTPopNormalView.m */,
+				EBDB8B9C1D54183C004DB5B2 /* XTPopTableView.h */,
+				EBDB8B9D1D54183C004DB5B2 /* XTPopTableView.m */,
+				EBDB8B9E1D54183C004DB5B2 /* XTPopView.h */,
+				EBDB8B9F1D54183C004DB5B2 /* XTPopViewBase.h */,
+				EBDB8BA01D54183C004DB5B2 /* XTPopViewBase.m */,
+			);
+			path = XTPopView;
+			sourceTree = "<group>";
+		};
 		EBE25A421D45DFB90078A073 /* 首字母排序 */ = {
 			isa = PBXGroup;
 			children = (
@@ -897,6 +921,7 @@
 		EBF1ADD81D52E12F009F4D89 /* 弹框 */ = {
 			isa = PBXGroup;
 			children = (
+				EBDB8B991D54183C004DB5B2 /* XTPopView */,
 				EBF1ADEC1D52E195009F4D89 /* 弹框 */,
 			);
 			name = "弹框";
@@ -1095,6 +1120,8 @@
 				EBEF38BC1D41A6EF00CA3A58 /* TXLViewController.m in Sources */,
 				EBEF38D31D41BDCE00CA3A58 /* MANViewController.m in Sources */,
 				EB1C56301D40C1AD0004AB2F /* SW_ViewController.m in Sources */,
+				EBDB8BA21D54183C004DB5B2 /* XTPopTableView.m in Sources */,
+				EBDB8BA11D54183C004DB5B2 /* XTPopNormalView.m in Sources */,
 				EBE2993C1D4F488F006A45CC /* ZFCirque.m in Sources */,
 				EBDB49011D5072E30029FEE8 /* zxLIneView.m in Sources */,
 				EBE299381D4F488F006A45CC /* ZFBarChart.m in Sources */,
@@ -1109,6 +1136,7 @@
 				EB691F5D1D4B421E0004732B /* PopoverView.m in Sources */,
 				EBE2993A1D4F488F006A45CC /* ZFGenericChart.m in Sources */,
 				EBC141861D3F7A5F00A20701 /* FXJZViewController.m in Sources */,
+				EBDB8BA31D54183C004DB5B2 /* XTPopViewBase.m in Sources */,
 				EBE299341D4F488F006A45CC /* UIColor+Zirkfied.m in Sources */,
 				EBEE82191D34801700469462 /* UIButton+AFNetworking.m in Sources */,
 				EBE299351D4F488F006A45CC /* UIView+Zirkfied.m in Sources */,

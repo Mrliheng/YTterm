@@ -159,22 +159,17 @@
 {
     for (int x=0; x<_subviewsArray.count; x++) {
         //圆点值
-        _ValuePointView = [[UIView alloc]initWithFrame:CGRectMake(30+xInterval*x-3, self.bounds.size.height/6*5-(([[_subviewsArray objectAtIndex:x]doubleValue]-_yAxisValueMIN)/_yValueInterval*(self.bounds.size.height/12))-3, 6, 6)];
+        _ValuePointView = [[UIView alloc]initWithFrame:CGRectMake(30+xInterval*x-5, self.bounds.size.height/6*5-(([[_subviewsArray objectAtIndex:x]doubleValue]-_yAxisValueMIN)/_yValueInterval*(self.bounds.size.height/12))-5, 10, 10)];
         _ValuePointView.layer.masksToBounds = YES;
-        _ValuePointView.layer.cornerRadius = 3;
+        _ValuePointView.layer.cornerRadius = 5;
         _ValuePointView.backgroundColor = [UIColor redColor];
         [_xScroll addSubview:_ValuePointView];
         
-//        
-//        
-//        UITapGestureRecognizer *PointTouch=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(PointTouchSet:)];
-//        [_ValuePointView addGestureRecognizer:PointTouch];
         
-        CGPoint point = CGPointMake(30+xInterval*x, self.bounds.size.height/6*5-(([[_subviewsArray objectAtIndex:x]doubleValue]-_yAxisValueMIN)/_yValueInterval*(self.bounds.size.height/12))-5);
-        _yudianValue = [NSString stringWithFormat:@"%0.2f",[[_subviewsArray objectAtIndex:x]doubleValue]];
-        self.visiblePopup = [[ADPopupView alloc] initAtPoint:point delegate:self withMessage:_yudianValue];
-        self.visiblePopup.popupColor = [UIColor darkGrayColor];
-        [self.visiblePopup showInView:_xScroll animated:YES];
+        self.visiblePopup = [[ADPopupView alloc] init];
+        UITapGestureRecognizer *PointTouch=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(PointTouchSet:)];
+        [_ValuePointView addGestureRecognizer:PointTouch];
+        _ValuePointView.tag = x;
     }
 }
 
@@ -200,7 +195,7 @@
         CGContextBeginPath(context);
         CGContextMoveToPoint(context, 30+xInterval*y,self.bounds.size.height/6*5-(([[_subviewsArray objectAtIndex:y]doubleValue]-_yAxisValueMIN)/_yValueInterval*(self.bounds.size.height/12)));
         //设置下一个坐标点
-        CGContextAddLineToPoint(context, 30+xInterval*(y+1),self.bounds.size.height/6*5-(([[_subviewsArray objectAtIndex:(y+1)]doubleValue]-_yAxisValueMIN)/_yValueInterval*(self.bounds.size.height/12))-1);
+        CGContextAddLineToPoint(context, 30+xInterval*(y+1),self.bounds.size.height/6*5-(([[_subviewsArray objectAtIndex:(y+1)]doubleValue]-_yAxisValueMIN)/_yValueInterval*(self.bounds.size.height/12)));
         //连接上面定义的坐标点
         CGContextStrokePath(context);
     }
@@ -214,11 +209,31 @@
     [_xScroll addSubview:imgView];
     
 }
-
-- (void)PointTouchSet:(UIView *)pointView
+//弹出弹框
+- (void)PointTouchSet:(UITapGestureRecognizer *)pointView
 {
     
+    int p = (int)pointView.view.tag;
+    CGPoint point = CGPointMake(30+xInterval*p, self.bounds.size.height/6*5-(([[_subviewsArray objectAtIndex:p]doubleValue]-_yAxisValueMIN)/_yValueInterval*(self.bounds.size.height/12))-5);
+    _yudianValue = [NSString stringWithFormat:@"%0.2f",[[_subviewsArray objectAtIndex:p]doubleValue]];
+    [self.visiblePopup AtPoint:point delegate:self withMessage:_yudianValue];
+    self.visiblePopup.popupColor = [UIColor darkGrayColor];
+    [self.visiblePopup showInView:_xScroll animated:YES];
+    
+    //点击空白区域
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped:)];
+    tap.cancelsTouchesInView = NO; // Allow touches through to a UITableView or other touchable view, as suggested by Dimajp.
+    [self addGestureRecognizer:tap];
+    
 }
+
+
+- (void)tapped:(UITapGestureRecognizer *)tap
+{
+    //移除弹框
+    [self.visiblePopup removeFromSuperview];
+}
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

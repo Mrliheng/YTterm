@@ -95,7 +95,6 @@
     [cell  setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     if (indexPath.row == 0) {
         cell.textLabel.text = @"岱山县";
-        cell.textLabel.tag = 1003;
     }
     //自定义分隔线
     UIImageView *imageViewSepE = [[UIImageView alloc]initWithFrame:CGRectMake(0, self.TXLTableView.bounds.size.height/1-1, self.view.bounds.size.width, 1)];
@@ -108,7 +107,7 @@
 {
     XQX_ViewController *xqx_Controller = [[XQX_ViewController alloc]init];
     [self.navigationController pushViewController:xqx_Controller animated:YES];
-    UILabel *xqx_nav = (UILabel *)[self.view viewWithTag:1003];
+    UILabel *xqx_nav = [tableView.visibleCells objectAtIndex:indexPath.row].textLabel;
     xqx_Controller.navigationItem.title = xqx_nav.text;
     [self.TXLTableView deselectRowAtIndexPath:[self.TXLTableView indexPathForSelectedRow] animated:YES];
 }

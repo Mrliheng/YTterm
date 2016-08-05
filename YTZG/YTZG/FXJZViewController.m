@@ -84,9 +84,7 @@
     //设置cell.textLabel
     cell.textLabel.font = [UIFont systemFontOfSize:self.view.bounds.size.height/40];
     cell.textLabel.textColor = [UIColor blackColor];
-    
     [cell.imageView setImage:[UIImage imageNamed:@"1"]];
-    cell.textLabel.tag = 1008;
     if (indexPath.row == 0 ) {
         cell.textLabel.text = @"地址灾害点";
     } else if (indexPath.row == 1){
@@ -108,7 +106,7 @@
 {
     XQFJViewController *xqfjController = [[XQFJViewController alloc]init];
     [self.navigationController pushViewController:xqfjController animated:YES];
-    UILabel *navLabel = (UILabel *)[self.view viewWithTag:1008];
+    UILabel *navLabel = [tableView.visibleCells objectAtIndex:indexPath.row].textLabel;
     xqfjController.navigationItem.title = navLabel.text;
     [self.FXJZTableView deselectRowAtIndexPath:[self.FXJZTableView indexPathForSelectedRow] animated:YES];
 }

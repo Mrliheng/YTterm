@@ -93,7 +93,6 @@
     }else if (indexPath.row == 2){
         cell.textLabel.text = @"水闸";
     }
-    cell.textLabel.tag = 1012;
     
     
     //自定义分隔线
@@ -107,9 +106,8 @@
 {
     XQWorkViewController *xqWorkController = [[XQWorkViewController alloc]init];
     [self.navigationController pushViewController:xqWorkController animated:YES];
-    //设置navigationItem.title(用tag值设置)
-    UILabel *navLabel = (UILabel *)[self.view viewWithTag:1012];
-    xqWorkController.navigationItem.title = navLabel.text;
+    //设置navigationItem.title
+    xqWorkController.navigationItem.title = [tableView.visibleCells objectAtIndex:indexPath.row].textLabel.text;
     [self.WorkTableView deselectRowAtIndexPath:[self.WorkTableView indexPathForSelectedRow] animated:YES];
 }
 

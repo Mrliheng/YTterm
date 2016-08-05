@@ -52,9 +52,9 @@ typedef enum {
     return self;
 }
 
-- (id)initAtPoint:(CGPoint)point delegate:(id<ADPopupViewDelegate>)theDelegate withContentView:(UIView *)contentView {
+- (void)AtPoint:(CGPoint)point delegate:(id<ADPopupViewDelegate>)theDelegate withContentView:(UIView *)contentView {
 
-    if (self = [super initWithFrame:CGRectZero]) {
+//    if (self = [super initWithFrame:CGRectZero]) {
 
         self.delegate = theDelegate;
         self.type = ptDownRight;
@@ -67,14 +67,14 @@ typedef enum {
         [self addContentView:contentView];
 
         [self addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)]];
-    }
-
-    return self;
+//    }
+//
+//    return self;
 }
 
-- (id)initAtPoint:(CGPoint)point delegate:(id<ADPopupViewDelegate>)theDelegate withMessage:(NSString *)theMessage {
+- (void)AtPoint:(CGPoint)point delegate:(id<ADPopupViewDelegate>)theDelegate withMessage:(NSString *)theMessage {
 
-    if (self = [super initWithFrame:CGRectZero]) {
+ 
 
         self.message = theMessage;
         self.presentationPoint = point;
@@ -89,9 +89,8 @@ typedef enum {
         [self redrawPopupWithMessage];
 
         [self addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)]];
-    }
 
-    return self;
+//    return self;
 }
 
 #pragma mark ContentView
@@ -208,7 +207,14 @@ typedef enum {
 
 - (CGSize)sizeForMessage:(NSString *)_message {
 
-    return [_message sizeWithFont:self.messageLabelFont constrainedToSize:POPUP_MAXIMUM_SIZE lineBreakMode:NSLineBreakByWordWrapping];
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    paragraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
+//    return [_message sizeWithFont:self.messageLabelFont constrainedToSize:POPUP_MAXIMUM_SIZE lineBreakMode:NSLineBreakByWordWrapping];
+    
+    return  ([_message boundingRectWithSize:POPUP_MAXIMUM_SIZE
+                        options:NSStringDrawingUsesLineFragmentOrigin
+                     attributes:@{NSParagraphStyleAttributeName: paragraphStyle.copy}
+                                    context:nil]).size;
 }
 
 - (UILabel *)contentViewForMessage:(NSString *)_message {

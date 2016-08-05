@@ -20,6 +20,9 @@
 #import "FXYAViewController.h"
 #import "YJDXViewController.h"
 #import "SetViewController.h"
+
+
+#define kWeatherServiceURLStr @"http://webservice.webxml.com.cn/WebServices/WeatherWebService.asmx/getWeatherbyCityName?heCityName="
 @interface MainViewController ()
 @property (strong,nonatomic) BTView *btView;
 //主界面上方标题试图
@@ -92,7 +95,7 @@
     [dateToday SetTitle];
     self.Datelabel.text = dateToday.dateNow;
     
-    //天气
+    //天气    
     self.TQlabel = [[UILabel alloc]init];
     self.TQlabel.frame = CGRectMake(self.TView.frame.size.width-self.TView.frame.size.height, self.TView.frame.size.height/4, self.TView.frame.size.height/6*5, self.TView.frame.size.height/24*5);
     self.TQlabel.textAlignment = NSTextAlignmentRight;
@@ -100,6 +103,7 @@
     self.TQlabel.font = [UIFont systemFontOfSize:self.TQlabel.frame.size.height/25*14];
     self.TQlabel.text = @"雷阵雨转多云";
     [self.TView addSubview:self.TQlabel];
+    
     //温度
     self.WDlabel = [[UILabel alloc]init];
     self.WDlabel.frame = CGRectMake(self.TView.frame.size.width-self.TView.frame.size.height, self.TView.frame.size.height/24*13, self.TView.frame.size.height/6*5, self.TView.frame.size.height/24*5);

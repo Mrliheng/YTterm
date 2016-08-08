@@ -65,6 +65,7 @@
 		EBE2993E1D4F488F006A45CC /* ZFLineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE2992D1D4F488F006A45CC /* ZFLineChart.m */; };
 		EBE2993F1D4F488F006A45CC /* ZFPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE299301D4F488F006A45CC /* ZFPieChart.m */; };
 		EBE299401D4F488F006A45CC /* ZFTranslucencePath.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE299321D4F488F006A45CC /* ZFTranslucencePath.m */; };
+		EBE404651D582B4000B8A915 /* TrigonView.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE404641D582B4000B8A915 /* TrigonView.m */; };
 		EBEE81951D3471C100469462 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EBEE81941D3471C100469462 /* main.m */; };
 		EBEE81981D3471C100469462 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EBEE81971D3471C100469462 /* AppDelegate.m */; };
 		EBEE819B1D3471C100469462 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBEE819A1D3471C100469462 /* ViewController.m */; };
@@ -234,6 +235,8 @@
 		EBE299301D4F488F006A45CC /* ZFPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFPieChart.m; sourceTree = "<group>"; };
 		EBE299311D4F488F006A45CC /* ZFTranslucencePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFTranslucencePath.h; sourceTree = "<group>"; };
 		EBE299321D4F488F006A45CC /* ZFTranslucencePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFTranslucencePath.m; sourceTree = "<group>"; };
+		EBE404631D582B4000B8A915 /* TrigonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrigonView.h; sourceTree = "<group>"; };
+		EBE404641D582B4000B8A915 /* TrigonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrigonView.m; sourceTree = "<group>"; };
 		EBEE81901D3471C100469462 /* YTZG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YTZG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBEE81941D3471C100469462 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EBEE81961D3471C100469462 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -610,6 +613,8 @@
 			children = (
 				EBDB48FF1D5072E30029FEE8 /* zxLIneView.h */,
 				EBDB49001D5072E30029FEE8 /* zxLIneView.m */,
+				EBE404631D582B4000B8A915 /* TrigonView.h */,
+				EBE404641D582B4000B8A915 /* TrigonView.m */,
 			);
 			name = "自定义折线图";
 			sourceTree = "<group>";
@@ -1134,6 +1139,7 @@
 				EBEE819B1D3471C100469462 /* ViewController.m in Sources */,
 				EBEF38C81D41B7A400CA3A58 /* FXYAViewController.m in Sources */,
 				EB691F5D1D4B421E0004732B /* PopoverView.m in Sources */,
+				EBE404651D582B4000B8A915 /* TrigonView.m in Sources */,
 				EBE2993A1D4F488F006A45CC /* ZFGenericChart.m in Sources */,
 				EBC141861D3F7A5F00A20701 /* FXJZViewController.m in Sources */,
 				EBDB8BA31D54183C004DB5B2 /* XTPopViewBase.m in Sources */,

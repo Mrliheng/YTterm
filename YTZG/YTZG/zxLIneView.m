@@ -35,10 +35,15 @@
         };
         _subviewsArray = [NSMutableArray arrayWithObjects:@"10.10",@"21",@"13.5",@"4.0",@"1.35",@"23",@"43",@"14",@"15",@"28",@"31",@"45", nil];
         NSArray *array = [_subviewsArray sortedArrayUsingComparator:cmptr];
+        
+        
         //取最大值
         _maxValue = [[array lastObject]doubleValue];
         //取最小值
         _minValue = [[array firstObject]doubleValue];
+        
+        //取警戒值
+        _WarningValue = 20.809;
         
         //间格数值差
         _yValueInterval = (_maxValue-_minValue)/10;
@@ -81,8 +86,11 @@
         _xScroll.backgroundColor = [UIColor whiteColor];
         _xScroll.contentSize = CGSizeMake(_xScroll.bounds.size.width+SCREEN_WIDTH-80, _xScroll.bounds.size.height);
         [self addSubview:_xScroll];
+        
+        
         [self yAxisSet];//y轴设置
         [self xAxisSet];//x轴设置
+        [self WarnLineSet];//警戒线设置
         [self ValuePointSet];//圆点值设置
         
     }
@@ -114,7 +122,7 @@
     //x轴平行线
     for (int j=0; j<11; j++) {
         UIView *yIntervalView = [[UIView alloc]initWithFrame:CGRectMake(0, self.bounds.size.height/12*j, 30+xInterval*(_subviewsArray.count-1),1 )];
-        yIntervalView.backgroundColor = [UIColor brownColor];
+        yIntervalView.backgroundColor = [UIColor colorWithRed:0.83 green:0.83 blue:0.83 alpha:1.0];
         [_xScroll addSubview:yIntervalView];
         
         UILabel *yAxisValue = [[UILabel alloc]initWithFrame:CGRectMake(0, self.bounds.size.height/12*11-10-self.bounds.size.height/12*j, 50, 20)];
@@ -141,7 +149,7 @@
     for (int i= 0; i<_subviewsArray.count; i++) {
         //平行y轴的线
         UIView *xIntervalView = [[UIView alloc]initWithFrame:CGRectMake(30+xInterval*i, 0, 1, self.bounds.size.height/6*5)];
-        xIntervalView.backgroundColor = [UIColor brownColor];
+        xIntervalView.backgroundColor = [UIColor colorWithRed:0.83 green:0.83 blue:0.83 alpha:1.0];
         [_xScroll addSubview:xIntervalView];
         
         //x轴上的值
@@ -151,6 +159,40 @@
         xAxisValue.font = [UIFont systemFontOfSize:10];
         xAxisValue.text = [_xAxisArray objectAtIndex:i];
         [_xScroll addSubview:xAxisValue];
+    }
+}
+
+//警戒线设置
+-(void)WarnLineSet
+{
+    //警戒线
+    _WarningLine = [[UIView alloc]initWithFrame:CGRectMake(0, self.bounds.size.height/6*5-((_WarningValue -_yAxisValueMIN)/_yValueInterval*(self.bounds.size.height/12))-1, 30+xInterval*(_subviewsArray.count-1), 2)];
+    _WarningLine.backgroundColor = [UIColor redColor];
+    [_xScroll addSubview:_WarningLine];
+    if ((_WarningValue > (_minValue+_yValueInterval*10))||(_WarningValue < _minValue)) {
+        _WarningLine.hidden = YES;
+    }else{
+        _WarningLine.hidden = NO;
+        
+        //警戒label
+        UILabel *WarnLabel = [[UILabel alloc]initWithFrame:CGRectMake(_WarningLine.frame.size.width/2, _WarningLine.frame.origin.y-20, _WarningLine.frame.size.width, 20)];
+        WarnLabel.backgroundColor = [UIColor clearColor];
+        WarnLabel.textAlignment = NSTextAlignmentLeft;
+        WarnLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:10];
+        WarnLabel.text = [NSString stringWithFormat:@"%0.2f(警戒水位)",_WarningValue];
+        WarnLabel.textColor = [UIColor blackColor];
+        
+        //警戒三角
+        _WarningTrigon = [[TrigonView alloc]initWithFrame:CGRectMake(_WarningLine.frame.size.width/2-20, _WarningLine.frame.origin.y-15, 15, 15)];
+        _WarningTrigon.backgroundColor = [UIColor clearColor];
+        if ((_WarningLine.frame.origin.y-20)< 0) {
+            WarnLabel.frame = CGRectMake(_WarningLine.frame.size.width/2, _WarningLine.frame.origin.y-1, _WarningLine.frame.size.width, 20);
+            _WarningTrigon.frame =CGRectMake(_WarningLine.frame.size.width/2-20, _WarningLine.frame.origin.y+2, 15, 15);
+        };
+        [_xScroll addSubview:WarnLabel];
+        [_xScroll addSubview:_WarningTrigon];
+        
+        
     }
 }
 

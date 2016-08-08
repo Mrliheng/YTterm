@@ -162,7 +162,8 @@
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    
+    cell.layer.borderColor = [UIColor clearColor].CGColor;
+    cell.layer.borderWidth = 1.0;
     
     
     if (tableView == self.YQXX_TableView) {
@@ -170,6 +171,7 @@
         int j;
         for (j = 0; j<3; j++) {
             UILabel *YQXX_labelCell = [[UILabel alloc]initWithFrame:CGRectMake(_JX_label*(j+1)+_labelWidth*j, 0, _labelWidth, self.view.bounds.size.height/16-1)];
+            YQXX_labelCell.backgroundColor = [UIColor clearColor];
             YQXX_labelCell.textColor = [UIColor blackColor];
             YQXX_labelCell.textAlignment = NSTextAlignmentCenter;
             YQXX_labelCell.font = [UIFont systemFontOfSize:YQXX_labelCell.bounds.size.height/5*2];
@@ -188,6 +190,7 @@
     } else if (tableView == self.zdmcTableView) {
         //设置YzdmcTableView上cell设置
         UILabel *zdmcLabelCell = [[UILabel alloc]initWithFrame:CGRectMake(_JX_label, 0, _labelWidth, self.view.bounds.size.height/16-1)];
+        zdmcLabelCell.backgroundColor = [UIColor clearColor];
         zdmcLabelCell.textColor = [UIColor blackColor];
         zdmcLabelCell.textAlignment = NSTextAlignmentCenter;
         zdmcLabelCell.font = [UIFont systemFontOfSize:zdmcLabelCell.bounds.size.height/5*2];

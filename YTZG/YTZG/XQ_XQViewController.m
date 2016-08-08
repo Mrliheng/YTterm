@@ -46,7 +46,6 @@
 //GYXQTableView添加
 -(void)GYXQTableViewAdd
 {
-    
     self.GYXQTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height/32*5*2) style:UITableViewStylePlain];
     self.GYXQTableView.tableFooterView.frame = CGRectZero;
     self.GYXQTableView.tableHeaderView.frame = CGRectZero;

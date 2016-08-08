@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ADPopupView.h"
+#import "TrigonView.h"
 
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
@@ -30,5 +31,9 @@
 @property (nonatomic) double minValue;//最小值
 
 @property (nonatomic, strong) ADPopupView *visiblePopup;
+
+@property (nonatomic) double WarningValue; //警戒值
+@property (nonatomic,strong) UIView *WarningLine; //警戒线
+@property (nonatomic,strong) TrigonView *WarningTrigon;
 
 @end

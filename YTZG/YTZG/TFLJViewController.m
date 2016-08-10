@@ -7,8 +7,8 @@
 //
 
 #import "TFLJViewController.h"
-
-@interface TFLJViewController ()
+#import <Mapbox/Mapbox.h>
+@interface TFLJViewController ()<MGLMapViewDelegate>
 
 @end
 @import Mapbox;
@@ -51,9 +51,18 @@
     mapView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     
     // Set the map’s center coordinate and zoom level.
-    [mapView setCenterCoordinate:CLLocationCoordinate2DMake(59.31, 18.06)
-                       zoomLevel:9
-                        animated:YES];
+    [mapView setCenterCoordinate:CLLocationCoordinate2DMake(30.16, 120.10) zoomLevel:8 animated:YES];//浙江杭州
+//    mapView.delegate = self;
+    //标注
+    CLLocationCoordinate2D location = CLLocationCoordinate2DMake(30.16, 120.10);
+    MGLPointAnnotation *myPointAnnotation = [[MGLPointAnnotation alloc]init];
+    [myPointAnnotation setCoordinate:location];
+    [mapView addAnnotation:myPointAnnotation];
+    [mapView selectAnnotation:myPointAnnotation animated:YES];//自动显示注释
+    myPointAnnotation.title = @"这是杭州";
+    
+    mapView.showsUserLocation = YES;//显示用户当前位置
+    [mapView setUserTrackingMode:MGLUserTrackingModeFollow animated:YES];
     [self.view addSubview:mapView];
 }
 
@@ -63,6 +72,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+//-(MGLAnnotationView *)mapView:(MGLMapView *)mapView viewForAnnotation:(id<MGLAnnotation>)annotation
+//{
+//    MGLAnnotationView *result = nil;
+//    
+//    
+//    return result;
+//}
 /*
 #pragma mark - Navigation
 

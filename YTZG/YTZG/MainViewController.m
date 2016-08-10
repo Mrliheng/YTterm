@@ -20,6 +20,8 @@
 #import "FXYAViewController.h"
 #import "YJDXViewController.h"
 #import "SetViewController.h"
+#import "TFLJViewController.h"
+#import "GISViewController.h"
 
 
 #define kWeatherServiceURLStr @"http://webservice.webxml.com.cn/WebServices/WeatherWebService.asmx/getWeatherbyCityName?heCityName="
@@ -299,6 +301,8 @@
 }//跳转工作信息
 
 - (void)mainSelector10{
+    TFLJViewController *tfljController = [[TFLJViewController alloc]init];
+    [self.navigationController pushViewController:tfljController animated:YES];
 }//跳转台风路径
 
 - (void)mainSelector11{
@@ -312,6 +316,8 @@
 }//跳转气象国土
 
 - (void)mainSelector13{
+    GISViewController *gisViewController = [[GISViewController alloc]init];
+    [self.navigationController pushViewController:gisViewController animated:YES];
 }//跳转GIS应用
 
 - (void)mainSelector20{

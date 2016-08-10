@@ -7,6 +7,7 @@
 //
 
 #import "QXGTViewController.h"
+#import "QXDHViewController.h"
 @interface QXGTViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property(strong,nonatomic) UITableView *QXGTTableView;
 
@@ -110,7 +111,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    QXDHViewController *qxdhViewController = [[QXDHViewController alloc]init];
+    [self.navigationController pushViewController:qxdhViewController animated:YES];
+//    qxdhViewController.navigationItem.title = [NSString stringWithFormat:@"%@",[tableView.visibleCells objectAtIndex:indexPath.row].textLabel.text];
     [self.QXGTTableView deselectRowAtIndexPath:[self.QXGTTableView indexPathForSelectedRow] animated:YES];
 }
 - (void)didReceiveMemoryWarning {

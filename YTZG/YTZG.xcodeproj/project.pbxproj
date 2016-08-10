@@ -13,6 +13,12 @@
 		EB1C562C1D40A44E0004AB2F /* SQXXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1C562B1D40A44E0004AB2F /* SQXXViewController.m */; };
 		EB1C56301D40C1AD0004AB2F /* SW_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1C562F1D40C1AD0004AB2F /* SW_ViewController.m */; };
 		EB3184181D45A32900B246BB /* XQWorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB3184171D45A32900B246BB /* XQWorkViewController.m */; };
+		EB40ED451D5AB4D600C20D0D /* TFLJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB40ED441D5AB4D600C20D0D /* TFLJViewController.m */; };
+		EB40ED471D5AB68F00C20D0D /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB40ED461D5AB68F00C20D0D /* Mapbox.framework */; };
+		EB40ED481D5AB68F00C20D0D /* Mapbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EB40ED461D5AB68F00C20D0D /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EB40ED4B1D5AB9BC00C20D0D /* GISViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB40ED4A1D5AB9BC00C20D0D /* GISViewController.m */; };
+		EB40ED4F1D5ABBF500C20D0D /* ZDSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB40ED4E1D5ABBF500C20D0D /* ZDSearchViewController.m */; };
+		EB40ED531D5AF7D300C20D0D /* QXDHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB40ED521D5AF7D300C20D0D /* QXDHViewController.m */; };
 		EB4EC5B91D3BB00A00E24D1E /* BTView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB4EC5B81D3BB00A00E24D1E /* BTView.m */; };
 		EB4EC5BC1D3BB23400E24D1E /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB4EC5BB1D3BB23400E24D1E /* MainViewController.m */; };
 		EB691F5D1D4B421E0004732B /* PopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB691F541D4B421E0004732B /* PopoverView.m */; };
@@ -126,6 +132,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				EB40ED481D5AB68F00C20D0D /* Mapbox.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,6 +151,15 @@
 		EB1C562F1D40C1AD0004AB2F /* SW_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SW_ViewController.m; sourceTree = "<group>"; };
 		EB3184161D45A32900B246BB /* XQWorkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XQWorkViewController.h; sourceTree = "<group>"; };
 		EB3184171D45A32900B246BB /* XQWorkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XQWorkViewController.m; sourceTree = "<group>"; };
+		EB40ED431D5AB4D600C20D0D /* TFLJViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFLJViewController.h; sourceTree = "<group>"; };
+		EB40ED441D5AB4D600C20D0D /* TFLJViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFLJViewController.m; sourceTree = "<group>"; };
+		EB40ED461D5AB68F00C20D0D /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mapbox.framework; sourceTree = "<group>"; };
+		EB40ED491D5AB9BC00C20D0D /* GISViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GISViewController.h; sourceTree = "<group>"; };
+		EB40ED4A1D5AB9BC00C20D0D /* GISViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GISViewController.m; sourceTree = "<group>"; };
+		EB40ED4D1D5ABBF500C20D0D /* ZDSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDSearchViewController.h; sourceTree = "<group>"; };
+		EB40ED4E1D5ABBF500C20D0D /* ZDSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDSearchViewController.m; sourceTree = "<group>"; };
+		EB40ED511D5AF7D300C20D0D /* QXDHViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QXDHViewController.h; sourceTree = "<group>"; };
+		EB40ED521D5AF7D300C20D0D /* QXDHViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QXDHViewController.m; sourceTree = "<group>"; };
 		EB4EC5B71D3BB00A00E24D1E /* BTView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTView.h; sourceTree = "<group>"; };
 		EB4EC5B81D3BB00A00E24D1E /* BTView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTView.m; sourceTree = "<group>"; };
 		EB4EC5BA1D3BB23400E24D1E /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -317,6 +333,7 @@
 				EBC5BC671D3DF62400A3E55A /* UIKit.framework in Frameworks */,
 				EBC5BC651D3DF61100A3E55A /* Foundation.framework in Frameworks */,
 				EBC5BC631D3DF5FE00A3E55A /* QuartzCore.framework in Frameworks */,
+				EB40ED471D5AB68F00C20D0D /* Mapbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +372,24 @@
 				EB691F511D4B41F80004732B /* 折线图 */,
 			);
 			name = "水位折线图";
+			sourceTree = "<group>";
+		};
+		EB40ED4C1D5ABB9500C20D0D /* GIS站点搜索 */ = {
+			isa = PBXGroup;
+			children = (
+				EB40ED4D1D5ABBF500C20D0D /* ZDSearchViewController.h */,
+				EB40ED4E1D5ABBF500C20D0D /* ZDSearchViewController.m */,
+			);
+			name = "GIS站点搜索";
+			sourceTree = "<group>";
+		};
+		EB40ED501D5AF77E00C20D0D /* 气象详情 */ = {
+			isa = PBXGroup;
+			children = (
+				EB40ED511D5AF7D300C20D0D /* QXDHViewController.h */,
+				EB40ED521D5AF7D300C20D0D /* QXDHViewController.m */,
+			);
+			name = "气象详情";
 			sourceTree = "<group>";
 		};
 		EB691F511D4B41F80004732B /* 折线图 */ = {
@@ -453,6 +488,9 @@
 		EBA0ECBC1D38C0CD006C8730 /* GIS应用 */ = {
 			isa = PBXGroup;
 			children = (
+				EB40ED491D5AB9BC00C20D0D /* GISViewController.h */,
+				EB40ED4A1D5AB9BC00C20D0D /* GISViewController.m */,
+				EB40ED4C1D5ABB9500C20D0D /* GIS站点搜索 */,
 			);
 			name = "GIS应用";
 			sourceTree = "<group>";
@@ -462,6 +500,7 @@
 			children = (
 				EBEF38B71D41A38700CA3A58 /* QXGTViewController.h */,
 				EBEF38B81D41A38700CA3A58 /* QXGTViewController.m */,
+				EB40ED501D5AF77E00C20D0D /* 气象详情 */,
 			);
 			name = "气象国土";
 			sourceTree = "<group>";
@@ -482,6 +521,8 @@
 		EBA0ECBF1D38C0DC006C8730 /* 台风路径 */ = {
 			isa = PBXGroup;
 			children = (
+				EB40ED431D5AB4D600C20D0D /* TFLJViewController.h */,
+				EB40ED441D5AB4D600C20D0D /* TFLJViewController.m */,
 			);
 			name = "台风路径";
 			sourceTree = "<group>";
@@ -757,6 +798,7 @@
 		EBEE81871D3471C100469462 = {
 			isa = PBXGroup;
 			children = (
+				EB40ED461D5AB68F00C20D0D /* Mapbox.framework */,
 				EBEE81921D3471C100469462 /* YTZG */,
 				EBEE81AC1D3471C200469462 /* YTZGTests */,
 				EBEE81B71D3471C200469462 /* YTZGUITests */,
@@ -977,6 +1019,7 @@
 				EBEE818D1D3471C100469462 /* Frameworks */,
 				EBEE818E1D3471C100469462 /* Resources */,
 				EBEE81E51D347DD200469462 /* Embed Frameworks */,
+				EB40ED421D5AB49F00C20D0D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1109,6 +1152,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		EB40ED421D5AB49F00C20D0D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework/strip-frameworks.sh\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EBEE818C1D3471C100469462 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -1120,6 +1179,7 @@
 				EBEE82141D34801700469462 /* AFURLSessionManager.m in Sources */,
 				EBEE821D1D34801700469462 /* UIWebView+AFNetworking.m in Sources */,
 				EB4EC5BC1D3BB23400E24D1E /* MainViewController.m in Sources */,
+				EB40ED451D5AB4D600C20D0D /* TFLJViewController.m in Sources */,
 				EB3184181D45A32900B246BB /* XQWorkViewController.m in Sources */,
 				EBEF38CC1D41B9D000CA3A58 /* YAXQViewController.m in Sources */,
 				EBEF38BC1D41A6EF00CA3A58 /* TXLViewController.m in Sources */,
@@ -1131,6 +1191,7 @@
 				EBDB49011D5072E30029FEE8 /* zxLIneView.m in Sources */,
 				EBE299381D4F488F006A45CC /* ZFBarChart.m in Sources */,
 				EBE299391D4F488F006A45CC /* ZFAxisLine.m in Sources */,
+				EB40ED4B1D5AB9BC00C20D0D /* GISViewController.m in Sources */,
 				EBE299371D4F488F006A45CC /* ZFBar.m in Sources */,
 				EBE2993E1D4F488F006A45CC /* ZFLineChart.m in Sources */,
 				EB1C56231D4056C50004AB2F /* YQXXViewController.m in Sources */,
@@ -1144,6 +1205,7 @@
 				EBC141861D3F7A5F00A20701 /* FXJZViewController.m in Sources */,
 				EBDB8BA31D54183C004DB5B2 /* XTPopViewBase.m in Sources */,
 				EBE299341D4F488F006A45CC /* UIColor+Zirkfied.m in Sources */,
+				EB40ED531D5AF7D300C20D0D /* QXDHViewController.m in Sources */,
 				EBEE82191D34801700469462 /* UIButton+AFNetworking.m in Sources */,
 				EBE299351D4F488F006A45CC /* UIView+Zirkfied.m in Sources */,
 				EBEE81981D3471C100469462 /* AppDelegate.m in Sources */,
@@ -1160,6 +1222,7 @@
 				EBEE82111D34801700469462 /* AFSecurityPolicy.m in Sources */,
 				EBE2993F1D4F488F006A45CC /* ZFPieChart.m in Sources */,
 				EB1C562C1D40A44E0004AB2F /* SQXXViewController.m in Sources */,
+				EB40ED4F1D5ABBF500C20D0D /* ZDSearchViewController.m in Sources */,
 				EBE25A3B1D45AAF40078A073 /* XQWAreaViewController.m in Sources */,
 				EB4EC5B91D3BB00A00E24D1E /* BTView.m in Sources */,
 				EBC141831D3F771600A20701 /* WorkViewController.m in Sources */,
@@ -1322,6 +1385,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = YTZG/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = git.YTZG;
@@ -1334,6 +1401,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = YTZG/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = git.YTZG;

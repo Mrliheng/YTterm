@@ -8,6 +8,7 @@
 
 #import "TFLJViewController.h"
 #import <Mapbox/Mapbox.h>
+
 @interface TFLJViewController ()<MGLMapViewDelegate>
 
 @end
@@ -58,10 +59,12 @@
     MGLPointAnnotation *myPointAnnotation = [[MGLPointAnnotation alloc]init];
     [myPointAnnotation setCoordinate:location];
     [mapView addAnnotation:myPointAnnotation];
-    [mapView selectAnnotation:myPointAnnotation animated:YES];//自动显示注释
+//    [mapView selectAnnotation:myPointAnnotation animated:YES];//自动显示注释
     myPointAnnotation.title = @"这是杭州";
+    myPointAnnotation.subtitle = @"杭州";
     
     mapView.showsUserLocation = YES;//显示用户当前位置
+    mapView.userInteractionEnabled = YES;
     [mapView setUserTrackingMode:MGLUserTrackingModeFollow animated:YES];
     [self.view addSubview:mapView];
 }
@@ -72,13 +75,17 @@
     // Dispose of any resources that can be recreated.
 }
 
-//-(MGLAnnotationView *)mapView:(MGLMapView *)mapView viewForAnnotation:(id<MGLAnnotation>)annotation
-//{
-//    MGLAnnotationView *result = nil;
-//    
-//    
-//    return result;
-//}
+
+-(MGLAnnotationView *)mapView:(MGLMapView *)mapView viewForAnnotation:(id<MGLAnnotation>)annotation
+{
+    static NSString *AnnotationViewId= @"annotationid";
+    MGLAnnotationView *anView = (MGLAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:AnnotationViewId];
+    if ([annotation isKindOfClass:[MGLPointAnnotation class]]) {
+        anView = [[MGLAnnotationView alloc]initWithReuseIdentifier:AnnotationViewId];
+        return anView;
+    }
+    return nil;
+}
 /*
 #pragma mark - Navigation
 

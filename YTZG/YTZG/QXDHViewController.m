@@ -9,7 +9,7 @@
 #import "QXDHViewController.h"
 
 @interface QXDHViewController ()
-
+@property (strong,nonatomic) UIView *qxtView;
 @end
 
 @implementation QXDHViewController
@@ -42,6 +42,11 @@
     
     self.view.backgroundColor = [UIColor colorWithRed:0.94 green:0.94 blue:0.95 alpha:1.0];//背景颜色
     
+    //气象图View添加
+    _qxtView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, (self.view.bounds.size.height-64)/5*2)];
+    _qxtView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:_qxtView];
+    
 }
 
 //返回上层界面
@@ -50,16 +55,18 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+//气象地图添加
+-(void)WeatherMapAdd
+{
+}
+
 //开始播放
 -(void)PlaySet
 {
     
 }
 
-//气象地图添加
--(void)WeatherMapAdd
-{
-}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

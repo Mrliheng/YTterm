@@ -49,13 +49,17 @@
     self.LoginBT.layer.cornerRadius = 4;
     self.LoginBT.backgroundColor = [UIColor colorWithRed:0.19 green:0.53 blue:0.90 alpha:1.0];
     
-    self.Usertextfeild.backgroundColor = [UIColor clearColor];
+    self.Usertextfeild.backgroundColor = [UIColor whiteColor];
     self.Usertextfeild.layer.masksToBounds =YES;
     self.Usertextfeild.layer.cornerRadius = 4;
+//    self.Usertextfeild.layer.borderColor = [UIColor blackColor].CGColor;
+//    self.Usertextfeild.layer.borderWidth = 1;
     
-    self.Passtesxtfeild.backgroundColor = [UIColor clearColor];
+    self.Passtesxtfeild.backgroundColor = [UIColor whiteColor];
     self.Passtesxtfeild.layer.masksToBounds =YES;
     self.Passtesxtfeild.layer.cornerRadius = 4;
+//    self.Passtesxtfeild.layer.borderColor = [UIColor blackColor].CGColor;
+//    self.Passtesxtfeild.layer.borderWidth = 1;
     
     //textfeild点击事件
     self.Usertextfeild.delegate = self;

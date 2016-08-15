@@ -48,7 +48,20 @@
 //退出登陆
 -(void)exitBT{
     
-    [[UIApplication sharedApplication] performSelector:@selector(terminateWithSuccess)];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"确定退出吗？" message:nil preferredStyle:(UIAlertControllerStyleAlert)];
+    // 创建按钮
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction *action) {
+        [[UIApplication sharedApplication] performSelector:@selector(terminateWithSuccess)];
+    }];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:(UIAlertActionStyleCancel) handler:^(UIAlertAction *action) {
+    }];
+    // 添加按钮 将按钮添加到UIAlertController对象上
+    [alertController addAction:okAction];
+    [alertController addAction:cancelAction];
+    
+    // 将UIAlertController模态出来 相当于UIAlertView show 的方法
+    [self presentViewController:alertController animated:YES completion:nil];
+    
     
 }
 -(void)terminateWithSuccess

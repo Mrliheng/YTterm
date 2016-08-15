@@ -35,10 +35,9 @@
     
     if(weatherInfo !=nil&&WeatherInfoNow !=nil)
     {
-        
         NSDictionary *weatherInfodic = [weatherInfo objectAtIndex:0];
         NSArray *dailyArray = [weatherInfodic objectForKey:@"daily"];
-        NSLog(@"%@",dailyArray);
+//        NSLog(@"%@",dailyArray);
         
         NSDictionary *daily = [dailyArray objectAtIndex:0];
         _strTempH = [daily objectForKey:@"high"];

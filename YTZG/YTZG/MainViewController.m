@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "BTView.h"
 #import "DateNowString.h"
+#import "weatherData.h"
 
 #import "DQXQController.h"
 #import "YQXXViewController.h"
@@ -97,22 +98,27 @@
     [dateToday SetTitle];
     self.Datelabel.text = dateToday.dateNow;
     
-    //天气    
+    //天气
+    weatherData *NowWeather = [[weatherData alloc]init];
+    [NowWeather SetWeather];
+    
     self.TQlabel = [[UILabel alloc]init];
     self.TQlabel.frame = CGRectMake(self.TView.frame.size.width-self.TView.frame.size.height, self.TView.frame.size.height/4, self.TView.frame.size.height/6*5, self.TView.frame.size.height/24*5);
     self.TQlabel.textAlignment = NSTextAlignmentRight;
     self.TQlabel.textColor = [UIColor whiteColor];
     self.TQlabel.font = [UIFont systemFontOfSize:self.TQlabel.frame.size.height/25*14];
-    self.TQlabel.text = @"雷阵雨转多云";
+    self.TQlabel.text = NowWeather.strWeather;
     [self.TView addSubview:self.TQlabel];
     
+    
     //温度
+    
     self.WDlabel = [[UILabel alloc]init];
     self.WDlabel.frame = CGRectMake(self.TView.frame.size.width-self.TView.frame.size.height, self.TView.frame.size.height/24*13, self.TView.frame.size.height/6*5, self.TView.frame.size.height/24*5);
     self.WDlabel.textAlignment = NSTextAlignmentRight;
     self.WDlabel.textColor = [UIColor whiteColor];
     self.WDlabel.font = [UIFont systemFontOfSize:self.WDlabel.frame.size.height/25*14];
-    self.WDlabel.text = @"33～25℃";
+    self.WDlabel.text = [NSString stringWithFormat:@"%@～%@℃", NowWeather.strTempH,NowWeather.strTempL];
     [self.TView addSubview:self.WDlabel];
     
 }

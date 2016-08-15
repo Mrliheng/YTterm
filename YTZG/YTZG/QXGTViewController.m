@@ -19,7 +19,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     //设置标题
-    self.navigationItem.title = @"防汛救灾";
+    self.navigationItem.title = @"气象国土";
     
     //设置返回按钮
     UIButton * backButton = [UIButton buttonWithType:UIButtonTypeCustom];

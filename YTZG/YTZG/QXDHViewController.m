@@ -9,7 +9,7 @@
 #import "QXDHViewController.h"
 
 @interface QXDHViewController ()
-@property (strong,nonatomic) UIView *qxtView;
+@property (strong,nonatomic) UIWebView *qxtView;
 @end
 
 @implementation QXDHViewController
@@ -43,9 +43,14 @@
     self.view.backgroundColor = [UIColor colorWithRed:0.94 green:0.94 blue:0.95 alpha:1.0];//背景颜色
     
     //气象图View添加
-    _qxtView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, (self.view.bounds.size.height-64)/5*2)];
-    _qxtView.backgroundColor = [UIColor whiteColor];
+    _qxtView = [[UIWebView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, (self.view.bounds.size.height-64))];
+    _qxtView.scalesPageToFit = YES;//自动对页面进行缩放以适应屏幕
     [self.view addSubview:_qxtView];
+    
+    NSURL* url = [NSURL URLWithString:@"http://typhoon.weather.com.cn/gis/typhoon_m.shtml"];//创建URL
+    NSURLRequest* request = [NSURLRequest requestWithURL:url];//创建NSURLRequest
+    [_qxtView loadRequest:request];//加载
+    
     
 }
 

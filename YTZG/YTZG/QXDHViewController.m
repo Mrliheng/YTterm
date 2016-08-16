@@ -17,7 +17,6 @@
     
 }
 @property (strong,nonatomic) UIWebView *qxtView;
-@property (strong,nonatomic) UIActivityIndicatorView *activityIndicator;
 @end
 
 @implementation QXDHViewController

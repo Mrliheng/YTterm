@@ -8,8 +8,9 @@
 
 #import "GISViewController.h"
 #import "ZDSearchViewController.h"
+#import <Mapbox/Mapbox.h>
 
-@interface GISViewController ()
+@interface GISViewController ()<MGLMapViewDelegate>
 
 @end
 @import Mapbox;
@@ -67,10 +68,44 @@
     mapView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     
     // Set the map’s center coordinate and zoom level.
-    [mapView setCenterCoordinate:CLLocationCoordinate2DMake(59.31, 18.06)
-                       zoomLevel:9
-                        animated:YES];
+    [mapView setCenterCoordinate:CLLocationCoordinate2DMake(30.16, 120.10) zoomLevel:8 animated:YES];//浙江杭州
+    //    mapView.delegate = self;
+    
+    
+    //标注
+    CLLocationCoordinate2D location = CLLocationCoordinate2DMake(30.16, 120.10);
+    CLLocationCoordinate2D location1 = CLLocationCoordinate2DMake(30.16, 110.10);
+    MGLPointAnnotation *myPointAnnotation = [[MGLPointAnnotation alloc]init];
+    [myPointAnnotation setCoordinate:location];
+    [mapView selectAnnotation:myPointAnnotation animated:YES];//自动显示注释
+    myPointAnnotation.title = @"这是杭州";
+    myPointAnnotation.subtitle = @"杭州";
+    
+    
+    MGLPointAnnotation *myPointAnnotation1 = [[MGLPointAnnotation alloc]init];
+    [myPointAnnotation1 setCoordinate:location1];
+    [mapView selectAnnotation:myPointAnnotation animated:YES];//自动显示注释
+    myPointAnnotation1.title = @"这是杭州";
+    myPointAnnotation1.subtitle = @"杭州";
+    
+    [mapView.annotations arrayByAddingObject:myPointAnnotation];
+    [mapView.annotations arrayByAddingObject:myPointAnnotation1];
+    mapView.showsUserLocation = YES;//显示用户当前位置
+    mapView.userInteractionEnabled = YES;
+    [mapView setUserTrackingMode:MGLUserTrackingModeFollow animated:YES];
     [self.view addSubview:mapView];
+}
+
+
+-(MGLAnnotationView *)mapView:(MGLMapView *)mapView viewForAnnotation:(id<MGLAnnotation>)annotation
+{
+    static NSString *AnnotationViewId= @"annotationid";
+    MGLAnnotationView *anView = (MGLAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:AnnotationViewId];
+    if ([annotation isKindOfClass:[MGLPointAnnotation class]]) {
+        anView = [[MGLAnnotationView alloc]initWithReuseIdentifier:AnnotationViewId];
+        return anView;
+    }
+    return nil;
 }
 
 - (void)didReceiveMemoryWarning {

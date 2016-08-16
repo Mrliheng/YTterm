@@ -8,6 +8,10 @@
 
 #import "QXGTViewController.h"
 #import "QXDHViewController.h"
+#import "OneHRViewController.h"
+#import "ThreeHRViewController.h"
+#import "WFViewController.h"
+
 @interface QXGTViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property(strong,nonatomic) UITableView *QXGTTableView;
 
@@ -111,9 +115,23 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    QXDHViewController *qxdhViewController = [[QXDHViewController alloc]init];
-    [self.navigationController pushViewController:qxdhViewController animated:YES];
-//    qxdhViewController.navigationItem.title = [NSString stringWithFormat:@"%@",[tableView.visibleCells objectAtIndex:indexPath.row].textLabel.text];
+    if (indexPath.row == 0) {
+        WFViewController *wfViewController = [[WFViewController alloc]init];
+        [self.navigationController pushViewController:wfViewController animated:YES];
+    }//天气预报
+    else if (indexPath.row == 1){
+        OneHRViewController *oneHRViewController = [[OneHRViewController alloc]init];
+        [self.navigationController pushViewController:oneHRViewController animated:YES];
+    }//1小时降雨量
+    else if (indexPath.row == 2){
+        ThreeHRViewController *threeHRViewController = [[ThreeHRViewController alloc]init];
+        [self.navigationController pushViewController:threeHRViewController animated:YES];
+    }//三小时降雨量
+    else if (indexPath.row == 3 || indexPath.row == 4 ) {
+        QXDHViewController *qxdhViewController = [[QXDHViewController alloc]init];
+        [self.navigationController pushViewController:qxdhViewController animated:YES];
+    }//气象云图
+    
     [self.QXGTTableView deselectRowAtIndexPath:[self.QXGTTableView indexPathForSelectedRow] animated:YES];
 }
 - (void)didReceiveMemoryWarning {

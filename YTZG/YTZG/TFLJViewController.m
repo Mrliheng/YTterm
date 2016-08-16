@@ -7,10 +7,18 @@
 //
 
 #import "TFLJViewController.h"
-#import <Mapbox/Mapbox.h>
+#import "MBProgressHUD.h"
 
-@interface TFLJViewController ()<MGLMapViewDelegate>
-
+@interface TFLJViewController ()<UIWebViewDelegate>
+{
+    
+    //HUD（Head-Up Display，意思是抬头显示的意思）
+    
+    MBProgressHUD *HUD;
+    
+}
+@property (strong,nonatomic)UIWebView *tfljWeb;
+@property (strong,nonatomic) UIActivityIndicatorView *activityIndicator;
 @end
 @import Mapbox;
 @implementation TFLJViewController
@@ -36,7 +44,7 @@
     self.view.backgroundColor = [UIColor colorWithRed:0.94 green:0.94 blue:0.95 alpha:1.0];//背景颜色
     
     //地图添加
-    [self Mapadd];
+    [self MapWebadd];
 }
 
 //返回上层界面
@@ -45,41 +53,52 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-//地图添加
--(void)Mapadd
+//地图WebView添加
+-(void)MapWebadd
 {
-    MGLMapView *mapView = [[MGLMapView alloc] initWithFrame:self.view.bounds];
-    mapView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    _tfljWeb = [[UIWebView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, (self.view.bounds.size.height-64))];
+    _tfljWeb.scalesPageToFit = YES;//自动对页面进行缩放以适应屏幕
+    _tfljWeb.scrollView.bounces = NO;
+    [self.view addSubview:_tfljWeb];
+    _tfljWeb.delegate = self;
     
-    // Set the map’s center coordinate and zoom level.
-    [mapView setCenterCoordinate:CLLocationCoordinate2DMake(30.16, 120.10) zoomLevel:8 animated:YES];//浙江杭州
-//    mapView.delegate = self;
-    
-    
-    //标注
-    CLLocationCoordinate2D location = CLLocationCoordinate2DMake(30.16, 120.10);
-    CLLocationCoordinate2D location1 = CLLocationCoordinate2DMake(30.16, 110.10);
-    MGLPointAnnotation *myPointAnnotation = [[MGLPointAnnotation alloc]init];
-    [myPointAnnotation setCoordinate:location];
-    [mapView selectAnnotation:myPointAnnotation animated:YES];//自动显示注释
-    myPointAnnotation.title = @"这是杭州";
-    myPointAnnotation.subtitle = @"杭州";
-    
-    
-    MGLPointAnnotation *myPointAnnotation1 = [[MGLPointAnnotation alloc]init];
-    [myPointAnnotation1 setCoordinate:location1];
-    [mapView selectAnnotation:myPointAnnotation animated:YES];//自动显示注释
-    myPointAnnotation1.title = @"这是杭州";
-    myPointAnnotation1.subtitle = @"杭州";
-    
-    [mapView.annotations arrayByAddingObject:myPointAnnotation];
-    [mapView.annotations arrayByAddingObject:myPointAnnotation1];
-    mapView.showsUserLocation = YES;//显示用户当前位置
-    mapView.userInteractionEnabled = YES;
-    [mapView setUserTrackingMode:MGLUserTrackingModeFollow animated:YES];
-    [self.view addSubview:mapView];
+    NSURL* url = [NSURL URLWithString:@"http://typhoon.zjwater.gov.cn/default.aspx"];//创建URL
+    NSURLRequest* request = [NSURLRequest requestWithURL:url];//创建NSURLRequest
+    [_tfljWeb loadRequest:request];
 }
 
+//WebView的代理
+-(void)webViewDidStartLoad:(UIWebView *)webView
+{
+    HUD = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    HUD.detailsLabelText = @"加载中...";
+    HUD.removeFromSuperViewOnHide = YES;
+}
+
+-(void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    HUD.detailsLabelText = @"加载完成";
+    // 设置图片
+    HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"MBProgressHUD.bundle/%@", @"success.png"]]];
+    HUD.mode = MBProgressHUDModeCustomView;
+    [HUD removeFromSuperViewOnHide];
+    [HUD hide:YES afterDelay:1.0];
+}
+
+-(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+    if (error) {
+        HUD.detailsLabelText = @"加载错误";
+        // 设置图片
+        HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"MBProgressHUD.bundle/%@", @"error.png"]]];
+        // 再设置模式
+        HUD.mode = MBProgressHUDModeCustomView;
+        // 隐藏时候从父控件中移除
+        HUD.removeFromSuperViewOnHide = YES;
+        // 1秒之后再消失
+        [HUD hide:YES afterDelay:1.0];
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -87,16 +106,7 @@
 }
 
 
--(MGLAnnotationView *)mapView:(MGLMapView *)mapView viewForAnnotation:(id<MGLAnnotation>)annotation
-{
-    static NSString *AnnotationViewId= @"annotationid";
-    MGLAnnotationView *anView = (MGLAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:AnnotationViewId];
-    if ([annotation isKindOfClass:[MGLPointAnnotation class]]) {
-        anView = [[MGLAnnotationView alloc]initWithReuseIdentifier:AnnotationViewId];
-        return anView;
-    }
-    return nil;
-}
+
 /*
 #pragma mark - Navigation
 

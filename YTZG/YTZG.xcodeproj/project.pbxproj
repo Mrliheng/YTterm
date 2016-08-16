@@ -92,6 +92,11 @@
 		EBE2993F1D4F488F006A45CC /* ZFPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE299301D4F488F006A45CC /* ZFPieChart.m */; };
 		EBE299401D4F488F006A45CC /* ZFTranslucencePath.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE299321D4F488F006A45CC /* ZFTranslucencePath.m */; };
 		EBE404651D582B4000B8A915 /* TrigonView.m in Sources */ = {isa = PBXBuildFile; fileRef = EBE404641D582B4000B8A915 /* TrigonView.m */; };
+		EBEBCD861D62A12D000247D2 /* OneHRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBEBCD851D62A12D000247D2 /* OneHRViewController.m */; };
+		EBEBCD891D62A15A000247D2 /* ThreeHRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBEBCD881D62A15A000247D2 /* ThreeHRViewController.m */; };
+		EBEBCD8C1D62A453000247D2 /* WFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBEBCD8B1D62A453000247D2 /* WFViewController.m */; };
+		EBEBCD9C1D62BE63000247D2 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EBEBCD991D62BE63000247D2 /* MBProgressHUD.bundle */; };
+		EBEBCD9D1D62BE63000247D2 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = EBEBCD9B1D62BE63000247D2 /* MBProgressHUD.m */; };
 		EBEE81951D3471C100469462 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EBEE81941D3471C100469462 /* main.m */; };
 		EBEE81981D3471C100469462 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EBEE81971D3471C100469462 /* AppDelegate.m */; };
 		EBEE819B1D3471C100469462 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBEE819A1D3471C100469462 /* ViewController.m */; };
@@ -294,6 +299,15 @@
 		EBE299321D4F488F006A45CC /* ZFTranslucencePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFTranslucencePath.m; sourceTree = "<group>"; };
 		EBE404631D582B4000B8A915 /* TrigonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrigonView.h; sourceTree = "<group>"; };
 		EBE404641D582B4000B8A915 /* TrigonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrigonView.m; sourceTree = "<group>"; };
+		EBEBCD841D62A12D000247D2 /* OneHRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneHRViewController.h; sourceTree = "<group>"; };
+		EBEBCD851D62A12D000247D2 /* OneHRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneHRViewController.m; sourceTree = "<group>"; };
+		EBEBCD871D62A15A000247D2 /* ThreeHRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreeHRViewController.h; sourceTree = "<group>"; };
+		EBEBCD881D62A15A000247D2 /* ThreeHRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreeHRViewController.m; sourceTree = "<group>"; };
+		EBEBCD8A1D62A453000247D2 /* WFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WFViewController.h; sourceTree = "<group>"; };
+		EBEBCD8B1D62A453000247D2 /* WFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WFViewController.m; sourceTree = "<group>"; };
+		EBEBCD991D62BE63000247D2 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		EBEBCD9A1D62BE63000247D2 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		EBEBCD9B1D62BE63000247D2 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		EBEE81901D3471C100469462 /* YTZG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YTZG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBEE81941D3471C100469462 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EBEE81961D3471C100469462 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -463,8 +477,10 @@
 		EB40ED501D5AF77E00C20D0D /* 气象详情 */ = {
 			isa = PBXGroup;
 			children = (
-				EB40ED511D5AF7D300C20D0D /* QXDHViewController.h */,
-				EB40ED521D5AF7D300C20D0D /* QXDHViewController.m */,
+				EBEBCD831D62A090000247D2 /* 天气预报 */,
+				EBEBCD821D62A064000247D2 /* 一小时降雨预报 */,
+				EBEBCD811D62A055000247D2 /* 三小时降雨预报 */,
+				EBEBCD801D62A044000247D2 /* 气象云图 */,
 			);
 			name = "气象详情";
 			sourceTree = "<group>";
@@ -874,6 +890,60 @@
 			name = "主界面";
 			sourceTree = "<group>";
 		};
+		EBEBCD801D62A044000247D2 /* 气象云图 */ = {
+			isa = PBXGroup;
+			children = (
+				EB40ED511D5AF7D300C20D0D /* QXDHViewController.h */,
+				EB40ED521D5AF7D300C20D0D /* QXDHViewController.m */,
+			);
+			name = "气象云图";
+			sourceTree = "<group>";
+		};
+		EBEBCD811D62A055000247D2 /* 三小时降雨预报 */ = {
+			isa = PBXGroup;
+			children = (
+				EBEBCD871D62A15A000247D2 /* ThreeHRViewController.h */,
+				EBEBCD881D62A15A000247D2 /* ThreeHRViewController.m */,
+			);
+			name = "三小时降雨预报";
+			sourceTree = "<group>";
+		};
+		EBEBCD821D62A064000247D2 /* 一小时降雨预报 */ = {
+			isa = PBXGroup;
+			children = (
+				EBEBCD841D62A12D000247D2 /* OneHRViewController.h */,
+				EBEBCD851D62A12D000247D2 /* OneHRViewController.m */,
+			);
+			name = "一小时降雨预报";
+			sourceTree = "<group>";
+		};
+		EBEBCD831D62A090000247D2 /* 天气预报 */ = {
+			isa = PBXGroup;
+			children = (
+				EBEBCD8A1D62A453000247D2 /* WFViewController.h */,
+				EBEBCD8B1D62A453000247D2 /* WFViewController.m */,
+			);
+			name = "天气预报";
+			sourceTree = "<group>";
+		};
+		EBEBCD8D1D62A68D000247D2 /* 加载弹框 */ = {
+			isa = PBXGroup;
+			children = (
+				EBEBCD981D62BE63000247D2 /* MBProgressHUD */,
+			);
+			name = "加载弹框";
+			sourceTree = "<group>";
+		};
+		EBEBCD981D62BE63000247D2 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				EBEBCD991D62BE63000247D2 /* MBProgressHUD.bundle */,
+				EBEBCD9A1D62BE63000247D2 /* MBProgressHUD.h */,
+				EBEBCD9B1D62BE63000247D2 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
 		EBEE81871D3471C100469462 = {
 			isa = PBXGroup;
 			children = (
@@ -1047,6 +1117,7 @@
 		EBF1ADD81D52E12F009F4D89 /* 弹框 */ = {
 			isa = PBXGroup;
 			children = (
+				EBEBCD8D1D62A68D000247D2 /* 加载弹框 */,
 				EBDB8B991D54183C004DB5B2 /* XTPopView */,
 				EBF1ADEC1D52E195009F4D89 /* 弹框 */,
 			);
@@ -1209,6 +1280,7 @@
 				EB21DEA21D5D743200EF45D8 /* 阴转晴.png in Resources */,
 				EBEE81A01D3471C100469462 /* Assets.xcassets in Resources */,
 				EB21DEA01D5D743200EF45D8 /* 晴.png in Resources */,
+				EBEBCD9C1D62BE63000247D2 /* MBProgressHUD.bundle in Resources */,
 				EB21DE951D5D743200EF45D8 /* 中雨.png in Resources */,
 				EBA0ECE21D38C6A7006C8730 /* 7.png in Resources */,
 				EBA0ECDA1D38C6A7006C8730 /* 10.png in Resources */,
@@ -1278,6 +1350,7 @@
 				EBEE821D1D34801700469462 /* UIWebView+AFNetworking.m in Sources */,
 				EB4EC5BC1D3BB23400E24D1E /* MainViewController.m in Sources */,
 				EB40ED451D5AB4D600C20D0D /* TFLJViewController.m in Sources */,
+				EBEBCD9D1D62BE63000247D2 /* MBProgressHUD.m in Sources */,
 				EB3184181D45A32900B246BB /* XQWorkViewController.m in Sources */,
 				EBEF38CC1D41B9D000CA3A58 /* YAXQViewController.m in Sources */,
 				EBEF38BC1D41A6EF00CA3A58 /* TXLViewController.m in Sources */,
@@ -1286,12 +1359,14 @@
 				EBDB8BA21D54183C004DB5B2 /* XTPopTableView.m in Sources */,
 				EBDB8BA11D54183C004DB5B2 /* XTPopNormalView.m in Sources */,
 				EBE2993C1D4F488F006A45CC /* ZFCirque.m in Sources */,
+				EBEBCD8C1D62A453000247D2 /* WFViewController.m in Sources */,
 				EBDB49011D5072E30029FEE8 /* zxLIneView.m in Sources */,
 				EBE299381D4F488F006A45CC /* ZFBarChart.m in Sources */,
 				EBE299391D4F488F006A45CC /* ZFAxisLine.m in Sources */,
 				EB40ED4B1D5AB9BC00C20D0D /* GISViewController.m in Sources */,
 				EBE299371D4F488F006A45CC /* ZFBar.m in Sources */,
 				EBE2993E1D4F488F006A45CC /* ZFLineChart.m in Sources */,
+				EBEBCD891D62A15A000247D2 /* ThreeHRViewController.m in Sources */,
 				EB1C56231D4056C50004AB2F /* YQXXViewController.m in Sources */,
 				EBE25A461D45DFE60078A073 /* pinyin.c in Sources */,
 				EBEE821A1D34801700469462 /* UIImageView+AFNetworking.m in Sources */,
@@ -1341,6 +1416,7 @@
 				EBEF38CF1D41BCC700CA3A58 /* YJDXViewController.m in Sources */,
 				EBEE82161D34801700469462 /* AFImageDownloader.m in Sources */,
 				EBEF38C51D41B31B00CA3A58 /* LINKViewController.m in Sources */,
+				EBEBCD861D62A12D000247D2 /* OneHRViewController.m in Sources */,
 				EB691F5E1D4B421E0004732B /* SHLineGraphView.m in Sources */,
 				EBEE82181D34801700469462 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 			);

@@ -43,7 +43,7 @@
     _wfWeb.scalesPageToFit = YES;//自动对页面进行缩放以适应屏幕
     [self.view addSubview:_wfWeb];
     _wfWeb.scrollView.bounces = NO;
-    _wfWeb.delegate = self;
+//    _wfWeb.delegate = self;
     
     NSURL* url = [NSURL URLWithString:@"http://alibaba.weather.com.cn/"];//创建URL
     NSURLRequest* request = [NSURLRequest requestWithURL:url];//创建NSURLRequest
